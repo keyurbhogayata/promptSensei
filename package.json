@@ -9,7 +9,11 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "start:mcp": "node dist/mcp-server.js"
+  },
+  "bin": {
+    "ai-coach": "./dist/cli.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +27,7 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
+    "commander": "^14.0.3",
     "simple-git": "^3.36.0"
   }
 }
