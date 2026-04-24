@@ -24,3 +24,7 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Git Worktrees
+.worktrees/
+worktrees/
