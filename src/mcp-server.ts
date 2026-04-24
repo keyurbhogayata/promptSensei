@@ -8,6 +8,7 @@ import {
 import { parseLog } from './parser';
 import { calculateWaste, WasteReport } from './calculator';
 import { readGitWorkingTree } from './git-reader';
+import { generateCoachingPrompt } from './advisor';
 
 const server = new Server(
   { name: 'ai-coach', version: '1.0.0' },
@@ -20,7 +21,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
       {
         name: 'review_session',
         description:
-          'Review a chat session log and calculate wasted tokens and money. Returns a structured report with total tokens, wasted tokens, money wasted (USD), and which turns were wasteful.',
+          'Review a chat session log and calculate wasted tokens and money. Returns a structured report. If "coachingContext" is provided in the JSON output, YOU MUST use it to generate a brief "Coaching Advice" tip for the user in your response.',
         inputSchema: {
           type: 'object' as const,
           properties: {
@@ -82,6 +83,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         : `  No significant waste detected.`,
     ].join('\n');
 
+    const coachingContext = generateCoachingPrompt(turns, report.wastedTurns);
+    const finalReport = coachingContext ? { ...report, coachingContext } : report;
+
     return {
       content: [
         {
@@ -90,7 +94,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         },
         {
           type: 'text' as const,
-          text: JSON.stringify(report, null, 2),
+          text: JSON.stringify(finalReport, null, 2),
         },
       ],
     };

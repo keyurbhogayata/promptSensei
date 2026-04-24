@@ -7,6 +7,7 @@ import * as readline from 'readline';
 import { parseLog } from './parser';
 import { calculateWaste } from './calculator';
 import { readGitWorkingTree } from './git-reader';
+import { generateCoachingPrompt, getAdviceFromLLM } from './advisor';
 
 const program = new Command();
 
@@ -75,6 +76,17 @@ program
       if (report.wastedTurns.length > 0) {
         console.log(`\n⚠️  Wasted turns (0-indexed): ${report.wastedTurns.join(', ')}`);
         console.log('   These turns produced code or context that was not present in the final result.');
+
+        console.log('\n💡 Generating Coaching Advice...');
+        const prompt = generateCoachingPrompt(turns, report.wastedTurns);
+        const advice = await getAdviceFromLLM(prompt);
+        if (advice) {
+          console.log('\n💡 Coaching Advice:\n');
+          console.log(advice);
+        } else {
+          console.log('\n💡 Coaching Advice: (No API key found. Set GEMINI_API_KEY for LLM advice)');
+        }
+
       } else {
         console.log('\n✅ No significant waste detected in this session.');
       }
