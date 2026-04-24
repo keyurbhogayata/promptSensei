@@ -7,6 +7,7 @@ import {
 } from '@modelcontextprotocol/sdk/types.js';
 import { parseLog } from './parser';
 import { calculateWaste, WasteReport } from './calculator';
+import { readGitWorkingTree } from './git-reader';
 
 const server = new Server(
   { name: 'ai-coach', version: '1.0.0' },
@@ -31,7 +32,12 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             finalFileContent: {
               type: 'string',
               description:
-                'The current content of the files that were modified during the session. Used to detect which AI-generated code survived.',
+                'The current content of the files modified during the session. Used to detect which AI-generated code survived. If git_dir is provided, this is ignored.',
+            },
+            git_dir: {
+              type: 'string',
+              description:
+                'Optional. Absolute path to the git project directory. When provided, the tool automatically reads the working tree instead of using finalFileContent.',
             },
           },
           required: ['logContent', 'finalFileContent'],
@@ -45,14 +51,17 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   if (request.params.name === 'review_session') {
     const args = request.params.arguments as Record<string, unknown>;
     const logContent = args['logContent'] as string;
-    const finalFileContent = args['finalFileContent'] as string;
+    const gitDir = args['git_dir'] as string | undefined;
+    const callerFileContent = (args['finalFileContent'] as string) ?? '';
 
     if (!logContent || typeof logContent !== 'string') {
       throw new Error('logContent is required and must be a string');
     }
-    if (typeof finalFileContent !== 'string') {
-      throw new Error('finalFileContent is required and must be a string');
-    }
+
+    // Prefer live git working tree if git_dir is provided
+    const finalFileContent: string = gitDir
+      ? await readGitWorkingTree(gitDir)
+      : callerFileContent;
 
     const turns = parseLog(logContent);
     const report: WasteReport = await calculateWaste(turns, finalFileContent);

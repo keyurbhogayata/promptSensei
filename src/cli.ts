@@ -2,9 +2,11 @@
 // src/cli.ts
 import { Command } from 'commander';
 import * as fs from 'fs';
+import * as path from 'path';
 import * as readline from 'readline';
 import { parseLog } from './parser';
 import { calculateWaste } from './calculator';
+import { readGitWorkingTree } from './git-reader';
 
 const program = new Command();
 
@@ -16,7 +18,9 @@ program
 program
   .command('review <logPath>')
   .description('Review a chat log file and print a session waste report')
-  .action(async (logPath: string) => {
+  .option('--no-git', 'Disable git integration (treats all AI-generated code as potentially wasted)')
+  .option('--git-dir <dir>', 'Path to the git repo to read working tree from (defaults to log file directory)')
+  .action(async (logPath: string, options: { git: boolean; gitDir?: string }) => {
     try {
       if (!fs.existsSync(logPath)) {
         console.error(`Error: File not found: ${logPath}`);
@@ -32,9 +36,28 @@ program
         return;
       }
 
-      // For MVP: pass empty string as finalTreeContent.
-      // A future enhancement (Task 5+) will read from git working tree.
-      const report = await calculateWaste(turns, '');
+      // Resolve the git directory: explicit flag > log file's directory > cwd
+      let finalTreeContent = '';
+      if (options.git !== false) {
+        const gitDir = options.gitDir
+          ? path.resolve(options.gitDir)
+          : path.dirname(path.resolve(logPath));
+
+        console.log(`\n🔍 Reading git working tree from: ${gitDir}`);
+        finalTreeContent = await readGitWorkingTree(gitDir);
+
+        if (!finalTreeContent) {
+          console.log('   No modified files found in git working tree.');
+          console.log('   Tip: Run this command before committing, or use --git-dir to point at your project.');
+        } else {
+          const fileCount = (finalTreeContent.match(/\/\/ FILE:/g) || []).length;
+          console.log(`   Found ${fileCount} modified file(s) in working tree.`);
+        }
+      } else {
+        console.log('\n⚠️  Git integration disabled (--no-git). All AI-generated code is treated as potentially wasted.');
+      }
+
+      const report = await calculateWaste(turns, finalTreeContent);
 
       const wastedPct =
         report.totalTokens > 0
