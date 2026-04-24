@@ -18,12 +18,17 @@ function countTokens(text: string): number {
 
 /**
  * Checks if any of the code blocks generated in a turn survived into the final tree.
- * Uses the first 30 characters of each code block as a fingerprint.
+ * Uses a whitespace-stripped fingerprint to be robust against formatting changes.
  */
 function codeFoundInFinalTree(codeBlocks: string[], finalTreeContent: string): boolean {
+  const strippedFinal = finalTreeContent.replace(/\s+/g, '');
+  if (!strippedFinal) return false;
+
   return codeBlocks.some((code) => {
-    const fingerprint = code.substring(0, 30).trim();
-    return fingerprint.length > 0 && finalTreeContent.includes(fingerprint);
+    const strippedCode = code.replace(/\s+/g, '');
+    // Take the first 40 non-whitespace characters as a fingerprint
+    const fingerprint = strippedCode.substring(0, 40);
+    return fingerprint.length > 0 && strippedFinal.includes(fingerprint);
   });
 }
 

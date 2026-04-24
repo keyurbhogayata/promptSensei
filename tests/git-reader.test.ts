@@ -46,7 +46,7 @@ describe('readGitWorkingTree', () => {
     expect(content).toContain('export const newFunc = () => {};');
   });
 
-  it('should return empty string if no changes exist', async () => {
+  it('should return content of committed files even if there are no uncommitted changes', async () => {
     const repoDir = makeTestRepo();
 
     fs.writeFileSync(path.join(repoDir, 'init.ts'), 'const x = 1;');
@@ -54,7 +54,7 @@ describe('readGitWorkingTree', () => {
     execSync('git commit -m "initial"', { cwd: repoDir });
 
     const content = await readGitWorkingTree(repoDir);
-    expect(content).toBe('');
+    expect(content).toContain('const x = 1;');
   });
 
   it('should return empty string for non-git directory', async () => {

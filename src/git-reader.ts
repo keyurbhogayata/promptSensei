@@ -50,22 +50,21 @@ export async function readGitWorkingTree(dir: string = process.cwd()): Promise<s
   const rootRaw = await git.revparse(['--show-toplevel']);
   const repoRoot = rootRaw.trim();
 
-  // Get status of all files: modified (M), untracked (??)
-  const status = await git.status();
+  // Get all tracked and untracked files (excluding ignored)
+  const trackedFilesRaw = await git.raw(['ls-files']);
+  const untrackedFilesRaw = await git.raw(['ls-files', '--others', '--exclude-standard']);
+  
+  const allFiles = [...trackedFilesRaw.split('\n'), ...untrackedFilesRaw.split('\n')]
+    .map(f => f.trim())
+    .filter(f => f.length > 0);
 
-  const changedFiles: string[] = [
-    ...status.modified,
-    ...status.not_added,   // untracked new files
-    ...status.created,     // newly staged files
-  ];
-
-  if (changedFiles.length === 0) {
+  if (allFiles.length === 0) {
     return '';
   }
 
   const contentParts: string[] = [];
 
-  for (const relativePath of changedFiles) {
+  for (const relativePath of allFiles) {
     if (!isReadable(relativePath)) continue;
 
     const absolutePath = path.join(repoRoot, relativePath);
