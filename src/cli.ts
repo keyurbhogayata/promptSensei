@@ -12,7 +12,7 @@ import { generateCoachingPrompt, getAdviceFromLLM } from './advisor';
 const program = new Command();
 
 program
-  .name('ai-coach')
+  .name('promptsensei')
   .description('Analyze AI coding sessions for wasted tokens and money')
   .version('1.0.0');
 
@@ -102,11 +102,11 @@ program
   .action(async () => {
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
     rl.question(
-      '\n[AI Coach] Session ended. Would you like a token & prompt review? (Y/n): ',
+      '\n[PromptSensei] Session ended. Would you like a token & prompt review? (Y/n): ',
       (answer) => {
         rl.close();
         if (answer.trim().toLowerCase() !== 'n') {
-          console.log('\nRun: ai-coach review <path-to-your-log-file>');
+          console.log('\nRun: promptsensei review <path-to-your-log-file>');
         } else {
           console.log('Review skipped.');
         }

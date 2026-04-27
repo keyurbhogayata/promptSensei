@@ -11,7 +11,7 @@ import { readGitWorkingTree } from './git-reader';
 import { generateCoachingPrompt } from './advisor';
 
 const server = new Server(
-  { name: 'ai-coach', version: '1.0.0' },
+  { name: 'mcp-token-audit', version: '1.0.0' },
   { capabilities: { tools: {} } }
 );
 
@@ -106,7 +106,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 export async function startMcpServer(): Promise<void> {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error('AI Coach MCP Server running on stdio');
+  console.error('PromptSensei MCP Server running on stdio');
 }
 
 // Start if run directly

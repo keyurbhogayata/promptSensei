@@ -1,9 +1,9 @@
-# Future Ideas for AI Coach
+# Future Ideas for PromptSensei
 
-Here is a backlog of potential features and improvements for the AI Coach project:
+Here is a backlog of potential features and improvements for the PromptSensei project:
 
 ## 1. "AI ROI" Dashboard (Web UI)
-- Command like `ai-coach serve` that spins up a local React dashboard on `localhost`.
+- Command like `promptsensei serve` that spins up a local React dashboard on `localhost`.
 - Visualizes token usage over time, plots "efficiency scores" (kept code vs. wasted code).
 - Visually highlights exactly which prompts cost the most money.
 
@@ -18,9 +18,9 @@ Here is a backlog of potential features and improvements for the AI Coach projec
 - A sophisticated parser that understands standard diff formats and simulates applying the diff internally to detect if the AI's intended change actually survived in the codebase.
 
 ## 4. CI/CD GitHub Action
-- Package the AI Coach as a GitHub Action.
+- Package the PromptSensei as a GitHub Action.
 - Automatically leaves a comment on Pull Requests: *"AI Efficiency Report: This PR cost $0.45 to generate. 80% of the code was kept."*
 
-## 5. `ai-coach optimize` (Pre-flight Checks)
+## 5. `promptsensei optimize` (Pre-flight Checks)
 - A command that helps *before* you chat.
-- E.g., `ai-coach optimize "Can you make a login form?"` -> tool rewrites the prompt to be more specific, token-efficient, and likely to succeed on the first try.
+- E.g., `promptsensei optimize "Can you make a login form?"` -> tool rewrites the prompt to be more specific, token-efficient, and likely to succeed on the first try.

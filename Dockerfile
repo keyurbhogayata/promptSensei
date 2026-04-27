@@ -21,7 +21,7 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-# Install git since AI Coach uses simple-git to analyze the working tree
+# Install git since PromptSensei uses simple-git to analyze the working tree
 RUN apk add --no-cache git
 
 # Copy dependency definitions

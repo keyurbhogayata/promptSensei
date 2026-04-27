@@ -7,7 +7,7 @@ import { readGitWorkingTree } from '../src/git-reader';
 
 // Creates a minimal real git repo in a temp dir for testing
 function makeTestRepo(): string {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'ai-coach-test-'));
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'promptSensei-test-'));
   execSync('git init', { cwd: dir });
   execSync('git config user.email "test@test.com"', { cwd: dir });
   execSync('git config user.name "Test"', { cwd: dir });
@@ -58,7 +58,7 @@ describe('readGitWorkingTree', () => {
   });
 
   it('should return empty string for non-git directory', async () => {
-    const nonGitDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ai-coach-nogit-'));
+    const nonGitDir = fs.mkdtempSync(path.join(os.tmpdir(), 'promptSensei-nogit-'));
     const content = await readGitWorkingTree(nonGitDir);
     expect(content).toBe('');
   });
