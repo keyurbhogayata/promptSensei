@@ -73,6 +73,45 @@ Because the host LLM already has the context of your conversation, it natively i
 
 ---
 
+## 🐳 3. Docker MCP Toolkit
+
+AI Coach is fully containerized and can be run securely inside Docker, making it perfectly compatible with the **Docker MCP Toolkit**. This means you don't even need Node.js installed on your host machine to use it as an MCP server!
+
+### Build the Image
+```bash
+docker build -t keyurbhogayata/ai-coach-mcp .
+```
+
+### Add to Docker MCP Toolkit
+If you are using the MCP Toolkit interface in Docker Desktop:
+1. Open the MCP Toolkit dashboard.
+2. Add a new server using the image `keyurbhogayata/ai-coach-mcp`.
+3. **Important:** Because AI Coach needs to read your local git repository to calculate waste, you MUST configure the container to map a volume to your local workspace.
+
+### Run via standard Docker
+To run the server via Docker manually (and pass it to your IDE), use:
+```json
+{
+  "mcpServers": {
+    "ai-coach": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "${workspaceFolder}:/workspace",
+        "keyurbhogayata/ai-coach-mcp"
+      ],
+      "env": {}
+    }
+  }
+}
+```
+*(Note: When using Docker, ensure the `git_dir` argument passed to the tool matches the internal container path, e.g., `/workspace`)*
+
+---
+
 ## 🛠️ Tech Stack
 - **TypeScript** & **Node.js**
 - **Commander.js** (CLI interface)
