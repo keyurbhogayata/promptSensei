@@ -1,5 +1,8 @@
 // src/calculator.ts
 import { Turn } from './parser';
+import { get_encoding } from 'tiktoken';
+
+const tokenizer = get_encoding('cl100k_base');
 
 export interface WasteReport {
   totalTokens: number;
@@ -9,11 +12,11 @@ export interface WasteReport {
 }
 
 /**
- * Rough token estimator: 1 word ≈ 1.3 tokens (industry heuristic).
+ * Precise token estimator using BPE (cl100k_base).
  */
 function countTokens(text: string): number {
   if (!text.trim()) return 0;
-  return Math.ceil(text.split(/\s+/).length * 1.3);
+  return tokenizer.encode(text).length;
 }
 
 /**
