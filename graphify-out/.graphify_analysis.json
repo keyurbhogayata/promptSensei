@@ -1,0 +1,192 @@
+{
+  "communities": {
+    "0": [
+      "ai_coach_design",
+      "ai_coach_plan",
+      "calculate_waste_fn",
+      "get_git_content_fn",
+      "git_survival_detection",
+      "negative_feedback_detection",
+      "parse_log_fn",
+      "review_session_tool",
+      "simple_git_dep",
+      "turn",
+      "waste_report"
+    ],
+    "1": [
+      "ai_roi_dashboard",
+      "antipattern_detection",
+      "diff_parser_feature",
+      "future_ideas",
+      "gemini_api",
+      "generate_advice_fn",
+      "github_action",
+      "openai_sdk",
+      "optimize_command",
+      "review_command"
+    ],
+    "2": [
+      "calculator_calculatewaste",
+      "calculator_codefoundinfinaltree",
+      "calculator_counttokens",
+      "src_calculator_ts",
+      "tiktoken",
+      "token_counting"
+    ],
+    "3": [
+      "git_reader_isgitrepo",
+      "git_reader_isreadable",
+      "git_reader_readgitworkingtree",
+      "src_git_reader_ts"
+    ],
+    "4": [
+      "advisor_generatecoachingprompt",
+      "advisor_getadvicefromllm",
+      "src_advisor_ts"
+    ],
+    "5": [
+      "parser_createturn",
+      "parser_parselog",
+      "src_parser_ts"
+    ],
+    "6": [
+      "promptsensei",
+      "readme",
+      "sample_chat"
+    ],
+    "7": [
+      "index_runcoach",
+      "src_index_ts"
+    ],
+    "8": [
+      "mcp_server_startmcpserver",
+      "src_mcp_server_ts"
+    ],
+    "9": [
+      "git_reader_test_maketestrepo",
+      "tests_git_reader_test_ts"
+    ],
+    "10": [
+      "jest_config_js"
+    ],
+    "11": [
+      "src_cli_ts"
+    ],
+    "12": [
+      "tests_advisor_test_ts"
+    ],
+    "13": [
+      "tests_calculator_test_js"
+    ],
+    "14": [
+      "tests_calculator_test_ts"
+    ],
+    "15": [
+      "tests_index_test_js"
+    ],
+    "16": [
+      "tests_index_test_ts"
+    ],
+    "17": [
+      "tests_parser_test_js"
+    ],
+    "18": [
+      "tests_parser_test_ts"
+    ],
+    "19": [
+      "commander_js"
+    ],
+    "20": [
+      "mcp_sdk"
+    ]
+  },
+  "cohesion": {},
+  "god_nodes": [
+    {
+      "id": "calculator_calculatewaste",
+      "label": "calculateWaste()",
+      "degree": 3
+    },
+    {
+      "id": "git_reader_readgitworkingtree",
+      "label": "readGitWorkingTree()",
+      "degree": 3
+    },
+    {
+      "id": "calculator_counttokens",
+      "label": "countTokens()",
+      "degree": 2
+    },
+    {
+      "id": "calculator_codefoundinfinaltree",
+      "label": "codeFoundInFinalTree()",
+      "degree": 2
+    },
+    {
+      "id": "git_reader_isreadable",
+      "label": "isReadable()",
+      "degree": 2
+    },
+    {
+      "id": "git_reader_isgitrepo",
+      "label": "isGitRepo()",
+      "degree": 2
+    },
+    {
+      "id": "parser_parselog",
+      "label": "parseLog()",
+      "degree": 2
+    },
+    {
+      "id": "parser_createturn",
+      "label": "createTurn()",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Smart Search/Replace Diff Parser",
+      "target": "Git Survival Detection",
+      "source_files": [
+        "",
+        ""
+      ],
+      "confidence": "INFERRED",
+      "relation": "would_enhance",
+      "note": "Bridges community 0 \u2192 community 1"
+    },
+    {
+      "source": "AI Coach Implementation Plan",
+      "target": "PromptSensei",
+      "source_files": [
+        "",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "plans_implementation_of",
+      "note": "Bridges community 6 \u2192 community 0"
+    },
+    {
+      "source": "FUTURE_IDEAS.md",
+      "target": "PromptSensei",
+      "source_files": [
+        "",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "proposes_features_for",
+      "note": "Bridges community 6 \u2192 community 1"
+    },
+    {
+      "source": "Token Counting",
+      "target": "calculateWaste()",
+      "source_files": [
+        "",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "enables",
+      "note": "Bridges community 0 \u2192 community 2"
+    }
+  ]
+}

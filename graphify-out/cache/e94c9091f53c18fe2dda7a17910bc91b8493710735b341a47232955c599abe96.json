@@ -1,0 +1,1 @@
+{"nodes": [{"id": "tests_parser_test_ts", "label": "parser.test.ts", "file_type": "code", "source_file": "tests\\parser.test.ts", "source_location": "L1"}], "edges": [{"source": "tests_parser_test_ts", "target": "src_parser", "relation": "imports_from", "confidence": "EXTRACTED", "source_file": "tests\\parser.test.ts", "source_location": "L2", "weight": 1.0}], "raw_calls": []}
