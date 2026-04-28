@@ -1,0 +1,913 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "review_pipeline",
+        "label": "Shared Review Pipeline",
+        "members": [
+          "parse_log_fn",
+          "calculate_waste_fn",
+          "generate_advice_fn",
+          "review_command",
+          "review_session_tool"
+        ],
+        "relation": "form_shared_parse_calculate_advise_pipeline",
+        "confidence": "EXTRACTED"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "jest.config.js",
+      "file_type": "code",
+      "source_file": "jest.config.js",
+      "source_location": "L1",
+      "id": "jest_config_js"
+    },
+    {
+      "label": "advisor.ts",
+      "file_type": "code",
+      "source_file": "src\\advisor.ts",
+      "source_location": "L1",
+      "id": "src_advisor_ts"
+    },
+    {
+      "label": "generateCoachingPrompt()",
+      "file_type": "code",
+      "source_file": "src\\advisor.ts",
+      "source_location": "L4",
+      "id": "advisor_generatecoachingprompt"
+    },
+    {
+      "label": "getAdviceFromLLM()",
+      "file_type": "code",
+      "source_file": "src\\advisor.ts",
+      "source_location": "L25",
+      "id": "advisor_getadvicefromllm"
+    },
+    {
+      "label": "calculator.ts",
+      "file_type": "code",
+      "source_file": "src\\calculator.ts",
+      "source_location": "L1",
+      "id": "src_calculator_ts"
+    },
+    {
+      "label": "countTokens()",
+      "file_type": "code",
+      "source_file": "src\\calculator.ts",
+      "source_location": "L17",
+      "id": "calculator_counttokens"
+    },
+    {
+      "label": "codeFoundInFinalTree()",
+      "file_type": "code",
+      "source_file": "src\\calculator.ts",
+      "source_location": "L26",
+      "id": "calculator_codefoundinfinaltree"
+    },
+    {
+      "label": "calculateWaste()",
+      "file_type": "code",
+      "source_file": "src\\calculator.ts",
+      "source_location": "L38",
+      "id": "calculator_calculatewaste"
+    },
+    {
+      "label": "cli.ts",
+      "file_type": "code",
+      "source_file": "src\\cli.ts",
+      "source_location": "L1",
+      "id": "src_cli_ts"
+    },
+    {
+      "label": "git-reader.ts",
+      "file_type": "code",
+      "source_file": "src\\git-reader.ts",
+      "source_location": "L1",
+      "id": "src_git_reader_ts"
+    },
+    {
+      "label": "isReadable()",
+      "file_type": "code",
+      "source_file": "src\\git-reader.ts",
+      "source_location": "L15",
+      "id": "git_reader_isreadable"
+    },
+    {
+      "label": "isGitRepo()",
+      "file_type": "code",
+      "source_file": "src\\git-reader.ts",
+      "source_location": "L23",
+      "id": "git_reader_isgitrepo"
+    },
+    {
+      "label": "readGitWorkingTree()",
+      "file_type": "code",
+      "source_file": "src\\git-reader.ts",
+      "source_location": "L42",
+      "id": "git_reader_readgitworkingtree"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "src\\index.ts",
+      "source_location": "L1",
+      "id": "src_index_ts"
+    },
+    {
+      "label": "runCoach()",
+      "file_type": "code",
+      "source_file": "src\\index.ts",
+      "source_location": "L2",
+      "id": "index_runcoach"
+    },
+    {
+      "label": "mcp-server.ts",
+      "file_type": "code",
+      "source_file": "src\\mcp-server.ts",
+      "source_location": "L1",
+      "id": "src_mcp_server_ts"
+    },
+    {
+      "label": "startMcpServer()",
+      "file_type": "code",
+      "source_file": "src\\mcp-server.ts",
+      "source_location": "L106",
+      "id": "mcp_server_startmcpserver"
+    },
+    {
+      "label": "parser.ts",
+      "file_type": "code",
+      "source_file": "src\\parser.ts",
+      "source_location": "L1",
+      "id": "src_parser_ts"
+    },
+    {
+      "label": "parseLog()",
+      "file_type": "code",
+      "source_file": "src\\parser.ts",
+      "source_location": "L7",
+      "id": "parser_parselog"
+    },
+    {
+      "label": "createTurn()",
+      "file_type": "code",
+      "source_file": "src\\parser.ts",
+      "source_location": "L42",
+      "id": "parser_createturn"
+    },
+    {
+      "label": "advisor.test.ts",
+      "file_type": "code",
+      "source_file": "tests\\advisor.test.ts",
+      "source_location": "L1",
+      "id": "tests_advisor_test_ts"
+    },
+    {
+      "label": "calculator.test.js",
+      "file_type": "code",
+      "source_file": "tests\\calculator.test.js",
+      "source_location": "L1",
+      "id": "tests_calculator_test_js"
+    },
+    {
+      "label": "calculator.test.ts",
+      "file_type": "code",
+      "source_file": "tests\\calculator.test.ts",
+      "source_location": "L1",
+      "id": "tests_calculator_test_ts"
+    },
+    {
+      "label": "git-reader.test.ts",
+      "file_type": "code",
+      "source_file": "tests\\git-reader.test.ts",
+      "source_location": "L1",
+      "id": "tests_git_reader_test_ts"
+    },
+    {
+      "label": "makeTestRepo()",
+      "file_type": "code",
+      "source_file": "tests\\git-reader.test.ts",
+      "source_location": "L9",
+      "id": "git_reader_test_maketestrepo"
+    },
+    {
+      "label": "index.test.js",
+      "file_type": "code",
+      "source_file": "tests\\index.test.js",
+      "source_location": "L1",
+      "id": "tests_index_test_js"
+    },
+    {
+      "label": "index.test.ts",
+      "file_type": "code",
+      "source_file": "tests\\index.test.ts",
+      "source_location": "L1",
+      "id": "tests_index_test_ts"
+    },
+    {
+      "label": "parser.test.js",
+      "file_type": "code",
+      "source_file": "tests\\parser.test.js",
+      "source_location": "L1",
+      "id": "tests_parser_test_js"
+    },
+    {
+      "label": "parser.test.ts",
+      "file_type": "code",
+      "source_file": "tests\\parser.test.ts",
+      "source_location": "L1",
+      "id": "tests_parser_test_ts"
+    },
+    {
+      "label": "PromptSensei",
+      "file_type": "document",
+      "id": "promptsensei"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "id": "readme"
+    },
+    {
+      "label": "FUTURE_IDEAS.md",
+      "file_type": "document",
+      "id": "future_ideas"
+    },
+    {
+      "label": "sample-chat.md",
+      "file_type": "document",
+      "id": "sample_chat"
+    },
+    {
+      "label": "AI Coach Implementation Plan",
+      "file_type": "document",
+      "id": "ai_coach_plan"
+    },
+    {
+      "label": "AI Coach Design Specification",
+      "file_type": "document",
+      "id": "ai_coach_design"
+    },
+    {
+      "label": "parseLog()",
+      "file_type": "code",
+      "id": "parse_log_fn"
+    },
+    {
+      "label": "calculateWaste()",
+      "file_type": "code",
+      "id": "calculate_waste_fn"
+    },
+    {
+      "label": "getGitContent()",
+      "file_type": "code",
+      "id": "get_git_content_fn"
+    },
+    {
+      "label": "generateAdvice()",
+      "file_type": "code",
+      "id": "generate_advice_fn"
+    },
+    {
+      "label": "Turn",
+      "file_type": "document",
+      "id": "turn"
+    },
+    {
+      "label": "WasteReport",
+      "file_type": "document",
+      "id": "waste_report"
+    },
+    {
+      "label": "Git Survival Detection",
+      "file_type": "document",
+      "id": "git_survival_detection"
+    },
+    {
+      "label": "Negative Feedback Detection",
+      "file_type": "document",
+      "id": "negative_feedback_detection"
+    },
+    {
+      "label": "Token Counting",
+      "file_type": "document",
+      "id": "token_counting"
+    },
+    {
+      "label": "tiktoken (cl100k_base)",
+      "file_type": "code",
+      "id": "tiktoken"
+    },
+    {
+      "label": "simple-git",
+      "file_type": "code",
+      "id": "simple_git_dep"
+    },
+    {
+      "label": "Gemini API",
+      "file_type": "document",
+      "id": "gemini_api"
+    },
+    {
+      "label": "OpenAI SDK",
+      "file_type": "code",
+      "id": "openai_sdk"
+    },
+    {
+      "label": "Commander.js",
+      "file_type": "code",
+      "id": "commander_js"
+    },
+    {
+      "label": "@modelcontextprotocol/sdk",
+      "file_type": "code",
+      "id": "mcp_sdk"
+    },
+    {
+      "label": "review command (CLI)",
+      "file_type": "code",
+      "id": "review_command"
+    },
+    {
+      "label": "review_session tool (MCP)",
+      "file_type": "code",
+      "id": "review_session_tool"
+    },
+    {
+      "label": "AI ROI Dashboard",
+      "file_type": "document",
+      "id": "ai_roi_dashboard"
+    },
+    {
+      "label": "Anti-Pattern Detection Engine",
+      "file_type": "document",
+      "id": "antipattern_detection"
+    },
+    {
+      "label": "Smart Search/Replace Diff Parser",
+      "file_type": "document",
+      "id": "diff_parser_feature"
+    },
+    {
+      "label": "CI/CD GitHub Action",
+      "file_type": "document",
+      "id": "github_action"
+    },
+    {
+      "label": "promptsensei optimize",
+      "file_type": "document",
+      "id": "optimize_command"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\advisor.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "src_advisor_ts",
+      "_tgt": "advisor_generatecoachingprompt",
+      "source": "src_advisor_ts",
+      "target": "advisor_generatecoachingprompt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\advisor.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "src_advisor_ts",
+      "_tgt": "advisor_getadvicefromllm",
+      "source": "src_advisor_ts",
+      "target": "advisor_getadvicefromllm"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\calculator.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "src_calculator_ts",
+      "_tgt": "tiktoken",
+      "source": "src_calculator_ts",
+      "target": "tiktoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\calculator.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "src_calculator_ts",
+      "_tgt": "calculator_counttokens",
+      "source": "src_calculator_ts",
+      "target": "calculator_counttokens"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\calculator.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "src_calculator_ts",
+      "_tgt": "calculator_codefoundinfinaltree",
+      "source": "src_calculator_ts",
+      "target": "calculator_codefoundinfinaltree"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\calculator.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_src": "src_calculator_ts",
+      "_tgt": "calculator_calculatewaste",
+      "source": "src_calculator_ts",
+      "target": "calculator_calculatewaste"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\calculator.ts",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_src": "calculator_calculatewaste",
+      "_tgt": "calculator_counttokens",
+      "source": "calculator_counttokens",
+      "target": "calculator_calculatewaste"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\calculator.ts",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_src": "calculator_calculatewaste",
+      "_tgt": "calculator_codefoundinfinaltree",
+      "source": "calculator_codefoundinfinaltree",
+      "target": "calculator_calculatewaste"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\git-reader.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "src_git_reader_ts",
+      "_tgt": "git_reader_isreadable",
+      "source": "src_git_reader_ts",
+      "target": "git_reader_isreadable"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\git-reader.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "src_git_reader_ts",
+      "_tgt": "git_reader_isgitrepo",
+      "source": "src_git_reader_ts",
+      "target": "git_reader_isgitrepo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\git-reader.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_src": "src_git_reader_ts",
+      "_tgt": "git_reader_readgitworkingtree",
+      "source": "src_git_reader_ts",
+      "target": "git_reader_readgitworkingtree"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\git-reader.ts",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_src": "git_reader_readgitworkingtree",
+      "_tgt": "git_reader_isreadable",
+      "source": "git_reader_isreadable",
+      "target": "git_reader_readgitworkingtree"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\git-reader.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_src": "git_reader_readgitworkingtree",
+      "_tgt": "git_reader_isgitrepo",
+      "source": "git_reader_isgitrepo",
+      "target": "git_reader_readgitworkingtree"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_src": "src_index_ts",
+      "_tgt": "index_runcoach",
+      "source": "src_index_ts",
+      "target": "index_runcoach"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\mcp-server.ts",
+      "source_location": "L106",
+      "weight": 1.0,
+      "_src": "src_mcp_server_ts",
+      "_tgt": "mcp_server_startmcpserver",
+      "source": "src_mcp_server_ts",
+      "target": "mcp_server_startmcpserver"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\parser.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "src_parser_ts",
+      "_tgt": "parser_parselog",
+      "source": "src_parser_ts",
+      "target": "parser_parselog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\parser.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_src": "src_parser_ts",
+      "_tgt": "parser_createturn",
+      "source": "src_parser_ts",
+      "target": "parser_createturn"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\parser.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "parser_parselog",
+      "_tgt": "parser_createturn",
+      "source": "parser_parselog",
+      "target": "parser_createturn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\git-reader.test.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "tests_git_reader_test_ts",
+      "_tgt": "git_reader_test_maketestrepo",
+      "source": "tests_git_reader_test_ts",
+      "target": "git_reader_test_maketestrepo"
+    },
+    {
+      "relation": "describes",
+      "confidence": "EXTRACTED",
+      "_src": "readme",
+      "_tgt": "promptsensei",
+      "source": "promptsensei",
+      "target": "readme"
+    },
+    {
+      "relation": "plans_implementation_of",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_plan",
+      "_tgt": "promptsensei",
+      "source": "promptsensei",
+      "target": "ai_coach_plan"
+    },
+    {
+      "relation": "specifies_design_of",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_design",
+      "_tgt": "promptsensei",
+      "source": "promptsensei",
+      "target": "ai_coach_design"
+    },
+    {
+      "relation": "proposes_features_for",
+      "confidence": "EXTRACTED",
+      "_src": "future_ideas",
+      "_tgt": "promptsensei",
+      "source": "promptsensei",
+      "target": "future_ideas"
+    },
+    {
+      "relation": "provides_sample_input_for",
+      "confidence": "EXTRACTED",
+      "_src": "sample_chat",
+      "_tgt": "promptsensei",
+      "source": "promptsensei",
+      "target": "sample_chat"
+    },
+    {
+      "relation": "proposes",
+      "confidence": "EXTRACTED",
+      "_src": "future_ideas",
+      "_tgt": "ai_roi_dashboard",
+      "source": "future_ideas",
+      "target": "ai_roi_dashboard"
+    },
+    {
+      "relation": "proposes",
+      "confidence": "EXTRACTED",
+      "_src": "future_ideas",
+      "_tgt": "antipattern_detection",
+      "source": "future_ideas",
+      "target": "antipattern_detection"
+    },
+    {
+      "relation": "proposes",
+      "confidence": "EXTRACTED",
+      "_src": "future_ideas",
+      "_tgt": "diff_parser_feature",
+      "source": "future_ideas",
+      "target": "diff_parser_feature"
+    },
+    {
+      "relation": "proposes",
+      "confidence": "EXTRACTED",
+      "_src": "future_ideas",
+      "_tgt": "github_action",
+      "source": "future_ideas",
+      "target": "github_action"
+    },
+    {
+      "relation": "proposes",
+      "confidence": "EXTRACTED",
+      "_src": "future_ideas",
+      "_tgt": "optimize_command",
+      "source": "future_ideas",
+      "target": "optimize_command"
+    },
+    {
+      "relation": "specifies_creation_of",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_plan",
+      "_tgt": "parse_log_fn",
+      "source": "ai_coach_plan",
+      "target": "parse_log_fn"
+    },
+    {
+      "relation": "specifies_creation_of",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_plan",
+      "_tgt": "calculate_waste_fn",
+      "source": "ai_coach_plan",
+      "target": "calculate_waste_fn"
+    },
+    {
+      "relation": "specifies_creation_of",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_plan",
+      "_tgt": "get_git_content_fn",
+      "source": "ai_coach_plan",
+      "target": "get_git_content_fn"
+    },
+    {
+      "relation": "specifies_creation_of",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_plan",
+      "_tgt": "generate_advice_fn",
+      "source": "ai_coach_plan",
+      "target": "generate_advice_fn"
+    },
+    {
+      "relation": "defines_contract_of",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_design",
+      "_tgt": "parse_log_fn",
+      "source": "ai_coach_design",
+      "target": "parse_log_fn"
+    },
+    {
+      "relation": "defines_contract_of",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_design",
+      "_tgt": "calculate_waste_fn",
+      "source": "ai_coach_design",
+      "target": "calculate_waste_fn"
+    },
+    {
+      "relation": "defines_contract_of",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_design",
+      "_tgt": "get_git_content_fn",
+      "source": "ai_coach_design",
+      "target": "get_git_content_fn"
+    },
+    {
+      "relation": "defines_contract_of",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_design",
+      "_tgt": "generate_advice_fn",
+      "source": "ai_coach_design",
+      "target": "generate_advice_fn"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_design",
+      "_tgt": "turn",
+      "source": "ai_coach_design",
+      "target": "turn"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_design",
+      "_tgt": "waste_report",
+      "source": "ai_coach_design",
+      "target": "waste_report"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_design",
+      "_tgt": "git_survival_detection",
+      "source": "ai_coach_design",
+      "target": "git_survival_detection"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "_src": "ai_coach_design",
+      "_tgt": "negative_feedback_detection",
+      "source": "ai_coach_design",
+      "target": "negative_feedback_detection"
+    },
+    {
+      "relation": "produces",
+      "confidence": "EXTRACTED",
+      "_src": "parse_log_fn",
+      "_tgt": "turn",
+      "source": "parse_log_fn",
+      "target": "turn"
+    },
+    {
+      "relation": "orchestrates",
+      "confidence": "EXTRACTED",
+      "_src": "review_command",
+      "_tgt": "parse_log_fn",
+      "source": "parse_log_fn",
+      "target": "review_command"
+    },
+    {
+      "relation": "orchestrates",
+      "confidence": "EXTRACTED",
+      "_src": "review_session_tool",
+      "_tgt": "parse_log_fn",
+      "source": "parse_log_fn",
+      "target": "review_session_tool"
+    },
+    {
+      "relation": "produces",
+      "confidence": "EXTRACTED",
+      "_src": "calculate_waste_fn",
+      "_tgt": "waste_report",
+      "source": "calculate_waste_fn",
+      "target": "waste_report"
+    },
+    {
+      "relation": "feeds_into",
+      "confidence": "EXTRACTED",
+      "_src": "git_survival_detection",
+      "_tgt": "calculate_waste_fn",
+      "source": "calculate_waste_fn",
+      "target": "git_survival_detection"
+    },
+    {
+      "relation": "feeds_into",
+      "confidence": "EXTRACTED",
+      "_src": "negative_feedback_detection",
+      "_tgt": "calculate_waste_fn",
+      "source": "calculate_waste_fn",
+      "target": "negative_feedback_detection"
+    },
+    {
+      "relation": "enables",
+      "confidence": "EXTRACTED",
+      "_src": "token_counting",
+      "_tgt": "calculate_waste_fn",
+      "source": "calculate_waste_fn",
+      "target": "token_counting"
+    },
+    {
+      "relation": "orchestrates",
+      "confidence": "EXTRACTED",
+      "_src": "review_command",
+      "_tgt": "calculate_waste_fn",
+      "source": "calculate_waste_fn",
+      "target": "review_command"
+    },
+    {
+      "relation": "orchestrates",
+      "confidence": "EXTRACTED",
+      "_src": "review_session_tool",
+      "_tgt": "calculate_waste_fn",
+      "source": "calculate_waste_fn",
+      "target": "review_session_tool"
+    },
+    {
+      "relation": "enables",
+      "confidence": "EXTRACTED",
+      "_src": "simple_git_dep",
+      "_tgt": "get_git_content_fn",
+      "source": "get_git_content_fn",
+      "target": "simple_git_dep"
+    },
+    {
+      "relation": "calls_primary",
+      "confidence": "EXTRACTED",
+      "_src": "generate_advice_fn",
+      "_tgt": "gemini_api",
+      "source": "generate_advice_fn",
+      "target": "gemini_api"
+    },
+    {
+      "relation": "falls_back_to",
+      "confidence": "EXTRACTED",
+      "_src": "generate_advice_fn",
+      "_tgt": "openai_sdk",
+      "source": "generate_advice_fn",
+      "target": "openai_sdk"
+    },
+    {
+      "relation": "orchestrates",
+      "confidence": "EXTRACTED",
+      "_src": "review_command",
+      "_tgt": "generate_advice_fn",
+      "source": "generate_advice_fn",
+      "target": "review_command"
+    },
+    {
+      "relation": "orchestrates",
+      "confidence": "EXTRACTED",
+      "_src": "review_session_tool",
+      "_tgt": "generate_advice_fn",
+      "source": "generate_advice_fn",
+      "target": "review_session_tool"
+    },
+    {
+      "relation": "would_extend",
+      "confidence": "INFERRED",
+      "_src": "antipattern_detection",
+      "_tgt": "generate_advice_fn",
+      "source": "generate_advice_fn",
+      "target": "antipattern_detection"
+    },
+    {
+      "relation": "contains_wasted",
+      "confidence": "EXTRACTED",
+      "_src": "waste_report",
+      "_tgt": "turn",
+      "source": "turn",
+      "target": "waste_report"
+    },
+    {
+      "relation": "enables",
+      "confidence": "EXTRACTED",
+      "_src": "simple_git_dep",
+      "_tgt": "git_survival_detection",
+      "source": "git_survival_detection",
+      "target": "simple_git_dep"
+    },
+    {
+      "relation": "would_enhance",
+      "confidence": "INFERRED",
+      "_src": "diff_parser_feature",
+      "_tgt": "git_survival_detection",
+      "source": "git_survival_detection",
+      "target": "diff_parser_feature"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "_src": "tiktoken",
+      "_tgt": "token_counting",
+      "source": "token_counting",
+      "target": "tiktoken"
+    },
+    {
+      "relation": "would_wrap",
+      "confidence": "INFERRED",
+      "_src": "github_action",
+      "_tgt": "review_command",
+      "source": "review_command",
+      "target": "github_action"
+    }
+  ]
+}
