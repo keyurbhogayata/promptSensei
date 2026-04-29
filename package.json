@@ -1,7 +1,7 @@
 {
-  "name": "promptSensei",
+  "name": "promptsensei-mcp",
   "version": "1.0.0",
-  "description": "",
+  "description": "An MCP server to analyze AI chat sessions and calculate token wastage using git repository analysis.",
   "main": "dist/index.js",
   "directories": {
     "doc": "docs",
@@ -13,11 +13,15 @@
     "start:mcp": "node dist/mcp-server.js"
   },
   "bin": {
-    "promptsensei": "./dist/cli.js"
+    "promptsensei": "dist/cli.js",
+    "promptsensei-mcp": "dist/mcp-server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["mcp", "ai", "token-wastage", "prompt-engineering"],
+  "author": "Keyur Bhogayata",
   "license": "ISC",
+  "files": [
+    "dist"
+  ],
   "type": "commonjs",
   "devDependencies": {
     "@types/jest": "^30.0.0",
