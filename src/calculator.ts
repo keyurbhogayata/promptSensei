@@ -1,8 +1,6 @@
 // src/calculator.ts
+import { encode } from 'gpt-tokenizer';
 import { Turn } from './parser';
-import { get_encoding } from 'tiktoken';
-
-const tokenizer = get_encoding('cl100k_base');
 
 export interface WasteReport {
   totalTokens: number;
@@ -16,7 +14,7 @@ export interface WasteReport {
  */
 function countTokens(text: string): number {
   if (!text.trim()) return 0;
-  return tokenizer.encode(text).length;
+  return encode(text).length;
 }
 
 /**
