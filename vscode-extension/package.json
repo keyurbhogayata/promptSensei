@@ -1,0 +1,45 @@
+{
+  "name": "promptsensei",
+  "displayName": "PromptSensei",
+  "description": "Analyze AI chat sessions for wasted tokens and get coaching advice directly in VS Code via MCP.",
+  "version": "1.0.0",
+  "publisher": "KeyurBhogayata",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhogayatakeyur/promptSensei"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["AI", "Other"],
+  "keywords": ["mcp", "ai", "token", "prompt", "coaching"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "promptsensei.server"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "esbuild src/extension.ts --bundle --platform=node --target=node18 --outdir=dist --external:vscode --format=cjs",
+    "bundle-mcp": "esbuild ../src/mcp-server.ts --bundle --platform=node --target=node18 --outfile=dist/mcp-server.js --format=cjs",
+    "build": "npm run compile && npm run bundle-mcp",
+    "package": "npx @vscode/vsce package --no-dependencies",
+    "publish": "npx @vscode/vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.90.0",
+    "esbuild": "^0.23.0",
+    "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "commander": "^14.0.3",
+    "simple-git": "^3.36.0",
+    "tiktoken": "^1.0.22"
+  }
+}
