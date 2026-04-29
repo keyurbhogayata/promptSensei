@@ -10,7 +10,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "start:mcp": "node dist/mcp-server.js"
+    "start:mcp": "node dist/mcp-server.js",
+    "deploy": "pwsh -File ./deploy.ps1"
   },
   "bin": {
     "promptsensei": "dist/cli.js",
