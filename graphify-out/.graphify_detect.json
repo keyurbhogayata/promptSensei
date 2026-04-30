@@ -1,6 +1,7 @@
 {
   "files": {
     "code": [
+      "deploy.ps1",
       "jest.config.js",
       "src\\advisor.ts",
       "src\\calculator.ts",
@@ -9,30 +10,24 @@
       "src\\index.ts",
       "src\\mcp-server.ts",
       "src\\parser.ts",
-      "tests\\advisor.test.ts",
-      "tests\\calculator.test.js",
-      "tests\\calculator.test.ts",
-      "tests\\git-reader.test.ts",
-      "tests\\index.test.js",
-      "tests\\index.test.ts",
-      "tests\\parser.test.js",
-      "tests\\parser.test.ts"
+      "vscode-extension\\src\\extension.js",
+      "vscode-extension\\src\\extension.ts"
     ],
     "document": [
       "FUTURE_IDEAS.md",
       "README.md",
-      "sample-chat.md",
-      "docs\\plans\\2026-04-24-ai-coach-plan.md",
-      "docs\\specs\\2026-04-24-ai-coach-design.md"
+      "vscode-extension\\README.md"
     ],
     "paper": [],
-    "image": [],
+    "image": [
+      "vscode-extension\\images\\icon.png"
+    ],
     "video": []
   },
-  "total_files": 21,
-  "total_words": 6291,
+  "total_files": 15,
+  "total_words": 18351,
   "needs_graph": false,
-  "warning": "Corpus is ~6,291 words - fits in a single context window. You may not need a graph.",
+  "warning": "Corpus is ~18,351 words - fits in a single context window. You may not need a graph.",
   "skipped_sensitive": [],
-  "graphifyignore_patterns": 0
+  "graphifyignore_patterns": 18
 }

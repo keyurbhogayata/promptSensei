@@ -1,5 +1,4 @@
 FUTURE_IDEAS.md
 README.md
-sample-chat.md
-docs\plans\2026-04-24-ai-coach-plan.md
-docs\specs\2026-04-24-ai-coach-design.md
+vscode-extension\README.md
+vscode-extension\images\icon.png

@@ -1,6 +1,48 @@
 {
   "nodes": [
     {
+      "id": "deploy_ps1",
+      "label": "deploy.ps1",
+      "file_type": "code",
+      "source_file": "deploy.ps1",
+      "source_location": "L1"
+    },
+    {
+      "id": "deploy_write_header",
+      "label": "Write-Header()",
+      "file_type": "code",
+      "source_file": "deploy.ps1",
+      "source_location": "L13"
+    },
+    {
+      "id": "deploy_write_step",
+      "label": "Write-Step()",
+      "file_type": "code",
+      "source_file": "deploy.ps1",
+      "source_location": "L19"
+    },
+    {
+      "id": "deploy_write_success",
+      "label": "Write-Success()",
+      "file_type": "code",
+      "source_file": "deploy.ps1",
+      "source_location": "L23"
+    },
+    {
+      "id": "deploy_write_fail",
+      "label": "Write-Fail()",
+      "file_type": "code",
+      "source_file": "deploy.ps1",
+      "source_location": "L27"
+    },
+    {
+      "id": "deploy_prompt_yesno",
+      "label": "Prompt-YesNo()",
+      "file_type": "code",
+      "source_file": "deploy.ps1",
+      "source_location": "L31"
+    },
+    {
       "id": "jest_config_js",
       "label": "jest.config.js",
       "file_type": "code",
@@ -22,13 +64,6 @@
       "source_location": "L4"
     },
     {
-      "id": "advisor_getadvicefromllm",
-      "label": "getAdviceFromLLM()",
-      "file_type": "code",
-      "source_file": "src\\advisor.ts",
-      "source_location": "L25"
-    },
-    {
       "id": "src_calculator_ts",
       "label": "calculator.ts",
       "file_type": "code",
@@ -40,21 +75,21 @@
       "label": "countTokens()",
       "file_type": "code",
       "source_file": "src\\calculator.ts",
-      "source_location": "L17"
+      "source_location": "L33"
     },
     {
       "id": "calculator_codefoundinfinaltree",
       "label": "codeFoundInFinalTree()",
       "file_type": "code",
       "source_file": "src\\calculator.ts",
-      "source_location": "L26"
+      "source_location": "L48"
     },
     {
       "id": "calculator_calculatewaste",
       "label": "calculateWaste()",
       "file_type": "code",
       "source_file": "src\\calculator.ts",
-      "source_location": "L38"
+      "source_location": "L69"
     },
     {
       "id": "src_cli_ts",
@@ -99,13 +134,6 @@
       "source_location": "L1"
     },
     {
-      "id": "index_runcoach",
-      "label": "runCoach()",
-      "file_type": "code",
-      "source_file": "src\\index.ts",
-      "source_location": "L2"
-    },
-    {
       "id": "src_mcp_server_ts",
       "label": "mcp-server.ts",
       "file_type": "code",
@@ -117,7 +145,7 @@
       "label": "startMcpServer()",
       "file_type": "code",
       "source_file": "src\\mcp-server.ts",
-      "source_location": "L106"
+      "source_location": "L113"
     },
     {
       "id": "src_parser_ts",
@@ -141,67 +169,102 @@
       "source_location": "L42"
     },
     {
-      "id": "tests_advisor_test_ts",
-      "label": "advisor.test.ts",
+      "id": "parser_extractsearchreplace",
+      "label": "extractSearchReplace()",
       "file_type": "code",
-      "source_file": "tests\\advisor.test.ts",
+      "source_file": "src\\parser.ts",
+      "source_location": "L76"
+    },
+    {
+      "id": "vscode_extension_src_extension_js",
+      "label": "extension.js",
+      "file_type": "code",
+      "source_file": "vscode-extension\\src\\extension.js",
       "source_location": "L1"
     },
     {
-      "id": "tests_calculator_test_js",
-      "label": "calculator.test.js",
+      "id": "extension_activate",
+      "label": "activate()",
       "file_type": "code",
-      "source_file": "tests\\calculator.test.js",
+      "source_file": "vscode-extension\\src\\extension.js",
+      "source_location": "L44"
+    },
+    {
+      "id": "extension_deactivate",
+      "label": "deactivate()",
+      "file_type": "code",
+      "source_file": "vscode-extension\\src\\extension.js",
+      "source_location": "L74"
+    },
+    {
+      "id": "vscode_extension_src_extension_ts",
+      "label": "extension.ts",
+      "file_type": "code",
+      "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L1"
     },
     {
-      "id": "tests_calculator_test_ts",
-      "label": "calculator.test.ts",
+      "id": "extension_activate",
+      "label": "activate()",
       "file_type": "code",
-      "source_file": "tests\\calculator.test.ts",
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L22"
+    },
+    {
+      "id": "extension_showreportwebview",
+      "label": "showReportWebview()",
+      "file_type": "code",
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L96"
+    },
+    {
+      "id": "extension_deactivate",
+      "label": "deactivate()",
+      "file_type": "code",
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L171"
+    },
+    {
+      "id": "deploy_ps1",
+      "label": "deploy.ps1",
+      "file_type": "code",
+      "source_file": "deploy.ps1",
       "source_location": "L1"
     },
     {
-      "id": "tests_git_reader_test_ts",
-      "label": "git-reader.test.ts",
+      "id": "deploy_write_header",
+      "label": "Write-Header()",
       "file_type": "code",
-      "source_file": "tests\\git-reader.test.ts",
-      "source_location": "L1"
+      "source_file": "deploy.ps1",
+      "source_location": "L13"
     },
     {
-      "id": "git_reader_test_maketestrepo",
-      "label": "makeTestRepo()",
+      "id": "deploy_write_step",
+      "label": "Write-Step()",
       "file_type": "code",
-      "source_file": "tests\\git-reader.test.ts",
-      "source_location": "L9"
+      "source_file": "deploy.ps1",
+      "source_location": "L19"
     },
     {
-      "id": "tests_index_test_js",
-      "label": "index.test.js",
+      "id": "deploy_write_success",
+      "label": "Write-Success()",
       "file_type": "code",
-      "source_file": "tests\\index.test.js",
-      "source_location": "L1"
+      "source_file": "deploy.ps1",
+      "source_location": "L23"
     },
     {
-      "id": "tests_index_test_ts",
-      "label": "index.test.ts",
+      "id": "deploy_write_fail",
+      "label": "Write-Fail()",
       "file_type": "code",
-      "source_file": "tests\\index.test.ts",
-      "source_location": "L1"
+      "source_file": "deploy.ps1",
+      "source_location": "L27"
     },
     {
-      "id": "tests_parser_test_js",
-      "label": "parser.test.js",
+      "id": "deploy_prompt_yesno",
+      "label": "Prompt-YesNo()",
       "file_type": "code",
-      "source_file": "tests\\parser.test.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_parser_test_ts",
-      "label": "parser.test.ts",
-      "file_type": "code",
-      "source_file": "tests\\parser.test.ts",
-      "source_location": "L1"
+      "source_file": "deploy.ps1",
+      "source_location": "L31"
     },
     {
       "id": "jest_config_js",
@@ -225,13 +288,6 @@
       "source_location": "L4"
     },
     {
-      "id": "advisor_getadvicefromllm",
-      "label": "getAdviceFromLLM()",
-      "file_type": "code",
-      "source_file": "src\\advisor.ts",
-      "source_location": "L25"
-    },
-    {
       "id": "src_calculator_ts",
       "label": "calculator.ts",
       "file_type": "code",
@@ -243,21 +299,21 @@
       "label": "countTokens()",
       "file_type": "code",
       "source_file": "src\\calculator.ts",
-      "source_location": "L17"
+      "source_location": "L33"
     },
     {
       "id": "calculator_codefoundinfinaltree",
       "label": "codeFoundInFinalTree()",
       "file_type": "code",
       "source_file": "src\\calculator.ts",
-      "source_location": "L26"
+      "source_location": "L48"
     },
     {
       "id": "calculator_calculatewaste",
       "label": "calculateWaste()",
       "file_type": "code",
       "source_file": "src\\calculator.ts",
-      "source_location": "L38"
+      "source_location": "L69"
     },
     {
       "id": "src_cli_ts",
@@ -302,13 +358,6 @@
       "source_location": "L1"
     },
     {
-      "id": "index_runcoach",
-      "label": "runCoach()",
-      "file_type": "code",
-      "source_file": "src\\index.ts",
-      "source_location": "L2"
-    },
-    {
       "id": "src_mcp_server_ts",
       "label": "mcp-server.ts",
       "file_type": "code",
@@ -320,7 +369,7 @@
       "label": "startMcpServer()",
       "file_type": "code",
       "source_file": "src\\mcp-server.ts",
-      "source_location": "L106"
+      "source_location": "L113"
     },
     {
       "id": "src_parser_ts",
@@ -344,182 +393,65 @@
       "source_location": "L42"
     },
     {
-      "id": "tests_advisor_test_ts",
-      "label": "advisor.test.ts",
+      "id": "parser_extractsearchreplace",
+      "label": "extractSearchReplace()",
       "file_type": "code",
-      "source_file": "tests\\advisor.test.ts",
+      "source_file": "src\\parser.ts",
+      "source_location": "L76"
+    },
+    {
+      "id": "vscode_extension_src_extension_js",
+      "label": "extension.js",
+      "file_type": "code",
+      "source_file": "vscode-extension\\src\\extension.js",
       "source_location": "L1"
     },
     {
-      "id": "tests_calculator_test_js",
-      "label": "calculator.test.js",
+      "id": "extension_activate",
+      "label": "activate()",
       "file_type": "code",
-      "source_file": "tests\\calculator.test.js",
+      "source_file": "vscode-extension\\src\\extension.js",
+      "source_location": "L44"
+    },
+    {
+      "id": "extension_deactivate",
+      "label": "deactivate()",
+      "file_type": "code",
+      "source_file": "vscode-extension\\src\\extension.js",
+      "source_location": "L74"
+    },
+    {
+      "id": "vscode_extension_src_extension_ts",
+      "label": "extension.ts",
+      "file_type": "code",
+      "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L1"
     },
     {
-      "id": "tests_calculator_test_ts",
-      "label": "calculator.test.ts",
+      "id": "extension_activate",
+      "label": "activate()",
       "file_type": "code",
-      "source_file": "tests\\calculator.test.ts",
-      "source_location": "L1"
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L22"
     },
     {
-      "id": "tests_git_reader_test_ts",
-      "label": "git-reader.test.ts",
+      "id": "extension_showreportwebview",
+      "label": "showReportWebview()",
       "file_type": "code",
-      "source_file": "tests\\git-reader.test.ts",
-      "source_location": "L1"
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L96"
     },
     {
-      "id": "git_reader_test_maketestrepo",
-      "label": "makeTestRepo()",
+      "id": "extension_deactivate",
+      "label": "deactivate()",
       "file_type": "code",
-      "source_file": "tests\\git-reader.test.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "tests_index_test_js",
-      "label": "index.test.js",
-      "file_type": "code",
-      "source_file": "tests\\index.test.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_index_test_ts",
-      "label": "index.test.ts",
-      "file_type": "code",
-      "source_file": "tests\\index.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_parser_test_js",
-      "label": "parser.test.js",
-      "file_type": "code",
-      "source_file": "tests\\parser.test.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_parser_test_ts",
-      "label": "parser.test.ts",
-      "file_type": "code",
-      "source_file": "tests\\parser.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "promptsensei",
-      "label": "PromptSensei",
-      "file_type": "document"
-    },
-    {
-      "id": "readme",
-      "label": "README.md",
-      "file_type": "document"
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L171"
     },
     {
       "id": "future_ideas",
-      "label": "FUTURE_IDEAS.md",
+      "label": "Future Ideas for PromptSensei",
       "file_type": "document"
-    },
-    {
-      "id": "sample_chat",
-      "label": "sample-chat.md",
-      "file_type": "document"
-    },
-    {
-      "id": "ai_coach_plan",
-      "label": "AI Coach Implementation Plan",
-      "file_type": "document"
-    },
-    {
-      "id": "ai_coach_design",
-      "label": "AI Coach Design Specification",
-      "file_type": "document"
-    },
-    {
-      "id": "parse_log_fn",
-      "label": "parseLog()",
-      "file_type": "code"
-    },
-    {
-      "id": "calculate_waste_fn",
-      "label": "calculateWaste()",
-      "file_type": "code"
-    },
-    {
-      "id": "get_git_content_fn",
-      "label": "getGitContent()",
-      "file_type": "code"
-    },
-    {
-      "id": "generate_advice_fn",
-      "label": "generateAdvice()",
-      "file_type": "code"
-    },
-    {
-      "id": "turn",
-      "label": "Turn",
-      "file_type": "document"
-    },
-    {
-      "id": "waste_report",
-      "label": "WasteReport",
-      "file_type": "document"
-    },
-    {
-      "id": "git_survival_detection",
-      "label": "Git Survival Detection",
-      "file_type": "document"
-    },
-    {
-      "id": "negative_feedback_detection",
-      "label": "Negative Feedback Detection",
-      "file_type": "document"
-    },
-    {
-      "id": "token_counting",
-      "label": "Token Counting",
-      "file_type": "document"
-    },
-    {
-      "id": "tiktoken",
-      "label": "tiktoken (cl100k_base)",
-      "file_type": "code"
-    },
-    {
-      "id": "simple_git_dep",
-      "label": "simple-git",
-      "file_type": "code"
-    },
-    {
-      "id": "gemini_api",
-      "label": "Gemini API",
-      "file_type": "document"
-    },
-    {
-      "id": "openai_sdk",
-      "label": "OpenAI SDK",
-      "file_type": "code"
-    },
-    {
-      "id": "commander_js",
-      "label": "Commander.js",
-      "file_type": "code"
-    },
-    {
-      "id": "mcp_sdk",
-      "label": "@modelcontextprotocol/sdk",
-      "file_type": "code"
-    },
-    {
-      "id": "review_command",
-      "label": "review command (CLI)",
-      "file_type": "code"
-    },
-    {
-      "id": "review_session_tool",
-      "label": "review_session tool (MCP)",
-      "file_type": "code"
     },
     {
       "id": "ai_roi_dashboard",
@@ -527,28 +459,123 @@
       "file_type": "document"
     },
     {
-      "id": "antipattern_detection",
+      "id": "anti_pattern_engine",
       "label": "Anti-Pattern Detection Engine",
       "file_type": "document"
     },
     {
-      "id": "diff_parser_feature",
+      "id": "diff_parser",
       "label": "Smart Search/Replace Diff Parser",
       "file_type": "document"
     },
     {
-      "id": "github_action",
+      "id": "ci_cd_action",
       "label": "CI/CD GitHub Action",
       "file_type": "document"
     },
     {
       "id": "optimize_command",
-      "label": "promptsensei optimize",
+      "label": "promptsensei optimize Command",
       "file_type": "document"
+    },
+    {
+      "id": "prompt_sensei",
+      "label": "PromptSensei",
+      "file_type": "document"
+    },
+    {
+      "id": "features",
+      "label": "Features",
+      "file_type": "document"
+    },
+    {
+      "id": "getting_started",
+      "label": "Getting Started",
+      "file_type": "document"
+    },
+    {
+      "id": "standalone_cli",
+      "label": "Standalone CLI Mode",
+      "file_type": "document"
+    },
+    {
+      "id": "mcp_server",
+      "label": "MCP Server Mode",
+      "file_type": "document"
+    },
+    {
+      "id": "docker_toolkit",
+      "label": "Docker MCP Toolkit",
+      "file_type": "document"
+    },
+    {
+      "id": "tech_stack",
+      "label": "Tech Stack",
+      "file_type": "document"
+    },
+    {
+      "id": "license",
+      "label": "License",
+      "file_type": "document"
+    },
+    {
+      "id": "vscode_readme",
+      "label": "VSCode Extension README",
+      "file_type": "document"
+    },
+    {
+      "id": "icon",
+      "label": "Icon",
+      "file_type": "image"
     }
   ],
   "edges": [
     {
+      "source": "deploy_ps1",
+      "target": "deploy_write_header",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "deploy.ps1",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "deploy_ps1",
+      "target": "deploy_write_step",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "deploy.ps1",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "deploy_ps1",
+      "target": "deploy_write_success",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "deploy.ps1",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "deploy_ps1",
+      "target": "deploy_write_fail",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "deploy.ps1",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "deploy_ps1",
+      "target": "deploy_prompt_yesno",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "deploy.ps1",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
       "source": "src_advisor_ts",
       "target": "src_parser",
       "relation": "imports_from",
@@ -567,17 +594,8 @@
       "weight": 1.0
     },
     {
-      "source": "src_advisor_ts",
-      "target": "advisor_getadvicefromllm",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src\\advisor.ts",
-      "source_location": "L25",
-      "weight": 1.0
-    },
-    {
       "source": "src_calculator_ts",
-      "target": "src_parser",
+      "target": "gpt_tokenizer",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
@@ -586,7 +604,7 @@
     },
     {
       "source": "src_calculator_ts",
-      "target": "tiktoken",
+      "target": "src_parser",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
@@ -599,7 +617,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
-      "source_location": "L17",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -608,7 +626,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
-      "source_location": "L26",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -617,7 +635,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
-      "source_location": "L38",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -626,7 +644,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
-      "source_location": "L48",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -635,7 +653,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
-      "source_location": "L59",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -699,15 +717,6 @@
       "confidence": "EXTRACTED",
       "source_file": "src\\cli.ts",
       "source_location": "L9",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_ts",
-      "target": "src_advisor",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "src\\cli.ts",
-      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -783,26 +792,8 @@
       "weight": 1.0
     },
     {
-      "source": "src_index_ts",
-      "target": "index_runcoach",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src\\index.ts",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
       "source": "src_mcp_server_ts",
       "target": "index_js",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "src\\mcp-server.ts",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "src_mcp_server_ts",
-      "target": "stdio_js",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
@@ -811,7 +802,7 @@
     },
     {
       "source": "src_mcp_server_ts",
-      "target": "types_js",
+      "target": "stdio_js",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
@@ -820,16 +811,16 @@
     },
     {
       "source": "src_mcp_server_ts",
-      "target": "src_parser",
+      "target": "types_js",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
-      "source_location": "L8",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
       "source": "src_mcp_server_ts",
-      "target": "src_calculator",
+      "target": "src_parser",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
@@ -838,7 +829,7 @@
     },
     {
       "source": "src_mcp_server_ts",
-      "target": "src_git_reader",
+      "target": "src_calculator",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
@@ -847,7 +838,7 @@
     },
     {
       "source": "src_mcp_server_ts",
-      "target": "src_advisor",
+      "target": "src_git_reader",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
@@ -856,11 +847,20 @@
     },
     {
       "source": "src_mcp_server_ts",
+      "target": "src_advisor",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\mcp-server.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mcp_server_ts",
       "target": "mcp_server_startmcpserver",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
-      "source_location": "L106",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -882,6 +882,15 @@
       "weight": 1.0
     },
     {
+      "source": "src_parser_ts",
+      "target": "parser_extractsearchreplace",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\parser.ts",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
       "source": "parser_parselog",
       "target": "parser_createturn",
       "relation": "calls",
@@ -891,111 +900,147 @@
       "weight": 1.0
     },
     {
-      "source": "tests_advisor_test_ts",
-      "target": "src_advisor",
+      "source": "parser_createturn",
+      "target": "parser_extractsearchreplace",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\parser.ts",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "vscode_extension_src_extension_js",
+      "target": "extension_activate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vscode-extension\\src\\extension.js",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "vscode_extension_src_extension_js",
+      "target": "extension_deactivate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vscode-extension\\src\\extension.js",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "vscode_extension_src_extension_ts",
+      "target": "vscode",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\advisor.test.ts",
+      "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L1",
       "weight": 1.0
     },
     {
-      "source": "tests_advisor_test_ts",
-      "target": "src_parser",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "tests\\advisor.test.ts",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_calculator_test_ts",
-      "target": "src_calculator",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "tests\\calculator.test.ts",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_calculator_test_ts",
-      "target": "src_parser",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "tests\\calculator.test.ts",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_git_reader_test_ts",
-      "target": "fs",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_git_reader_test_ts",
+      "source": "vscode_extension_src_extension_ts",
       "target": "path",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "vscode_extension_src_extension_ts",
+      "target": "src_parser",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L3",
       "weight": 1.0
     },
     {
-      "source": "tests_git_reader_test_ts",
-      "target": "os",
+      "source": "vscode_extension_src_extension_ts",
+      "target": "src_calculator",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
+      "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L4",
       "weight": 1.0
     },
     {
-      "source": "tests_git_reader_test_ts",
-      "target": "child_process",
+      "source": "vscode_extension_src_extension_ts",
+      "target": "src_git_reader",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
+      "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L5",
       "weight": 1.0
     },
     {
-      "source": "tests_git_reader_test_ts",
-      "target": "src_git_reader",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_git_reader_test_ts",
-      "target": "git_reader_test_maketestrepo",
+      "source": "vscode_extension_src_extension_ts",
+      "target": "extension_activate",
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
-      "source_location": "L9",
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
-      "source": "tests_index_test_ts",
-      "target": "src_index",
-      "relation": "imports_from",
+      "source": "vscode_extension_src_extension_ts",
+      "target": "extension_showreportwebview",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\index.test.ts",
-      "source_location": "L2",
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
-      "source": "tests_parser_test_ts",
-      "target": "src_parser",
-      "relation": "imports_from",
+      "source": "vscode_extension_src_extension_ts",
+      "target": "extension_deactivate",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\parser.test.ts",
-      "source_location": "L2",
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L171",
+      "weight": 1.0
+    },
+    {
+      "source": "deploy_ps1",
+      "target": "deploy_write_header",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "deploy.ps1",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "deploy_ps1",
+      "target": "deploy_write_step",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "deploy.ps1",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "deploy_ps1",
+      "target": "deploy_write_success",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "deploy.ps1",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "deploy_ps1",
+      "target": "deploy_write_fail",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "deploy.ps1",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "deploy_ps1",
+      "target": "deploy_prompt_yesno",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "deploy.ps1",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -1017,17 +1062,8 @@
       "weight": 1.0
     },
     {
-      "source": "src_advisor_ts",
-      "target": "advisor_getadvicefromllm",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src\\advisor.ts",
-      "source_location": "L25",
-      "weight": 1.0
-    },
-    {
       "source": "src_calculator_ts",
-      "target": "src_parser",
+      "target": "gpt_tokenizer",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
@@ -1036,7 +1072,7 @@
     },
     {
       "source": "src_calculator_ts",
-      "target": "tiktoken",
+      "target": "src_parser",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
@@ -1049,7 +1085,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
-      "source_location": "L17",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -1058,7 +1094,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
-      "source_location": "L26",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -1067,7 +1103,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
-      "source_location": "L38",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -1076,7 +1112,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
-      "source_location": "L48",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -1085,7 +1121,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "src\\calculator.ts",
-      "source_location": "L59",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -1149,15 +1185,6 @@
       "confidence": "EXTRACTED",
       "source_file": "src\\cli.ts",
       "source_location": "L9",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_ts",
-      "target": "src_advisor",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "src\\cli.ts",
-      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -1233,26 +1260,8 @@
       "weight": 1.0
     },
     {
-      "source": "src_index_ts",
-      "target": "index_runcoach",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src\\index.ts",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
       "source": "src_mcp_server_ts",
       "target": "index_js",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "src\\mcp-server.ts",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "src_mcp_server_ts",
-      "target": "stdio_js",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
@@ -1261,7 +1270,7 @@
     },
     {
       "source": "src_mcp_server_ts",
-      "target": "types_js",
+      "target": "stdio_js",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
@@ -1270,16 +1279,16 @@
     },
     {
       "source": "src_mcp_server_ts",
-      "target": "src_parser",
+      "target": "types_js",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
-      "source_location": "L8",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
       "source": "src_mcp_server_ts",
-      "target": "src_calculator",
+      "target": "src_parser",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
@@ -1288,7 +1297,7 @@
     },
     {
       "source": "src_mcp_server_ts",
-      "target": "src_git_reader",
+      "target": "src_calculator",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
@@ -1297,7 +1306,7 @@
     },
     {
       "source": "src_mcp_server_ts",
-      "target": "src_advisor",
+      "target": "src_git_reader",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
@@ -1306,11 +1315,20 @@
     },
     {
       "source": "src_mcp_server_ts",
+      "target": "src_advisor",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\mcp-server.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mcp_server_ts",
       "target": "mcp_server_startmcpserver",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src\\mcp-server.ts",
-      "source_location": "L106",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -1332,6 +1350,15 @@
       "weight": 1.0
     },
     {
+      "source": "src_parser_ts",
+      "target": "parser_extractsearchreplace",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\parser.ts",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
       "source": "parser_parselog",
       "target": "parser_createturn",
       "relation": "calls",
@@ -1341,381 +1368,190 @@
       "weight": 1.0
     },
     {
-      "source": "tests_advisor_test_ts",
-      "target": "src_advisor",
+      "source": "parser_createturn",
+      "target": "parser_extractsearchreplace",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "src\\parser.ts",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "vscode_extension_src_extension_js",
+      "target": "extension_activate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vscode-extension\\src\\extension.js",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "vscode_extension_src_extension_js",
+      "target": "extension_deactivate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vscode-extension\\src\\extension.js",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "vscode_extension_src_extension_ts",
+      "target": "vscode",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\advisor.test.ts",
+      "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L1",
       "weight": 1.0
     },
     {
-      "source": "tests_advisor_test_ts",
-      "target": "src_parser",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "tests\\advisor.test.ts",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_calculator_test_ts",
-      "target": "src_calculator",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "tests\\calculator.test.ts",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_calculator_test_ts",
-      "target": "src_parser",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "tests\\calculator.test.ts",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_git_reader_test_ts",
-      "target": "fs",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_git_reader_test_ts",
+      "source": "vscode_extension_src_extension_ts",
       "target": "path",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "vscode_extension_src_extension_ts",
+      "target": "src_parser",
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L3",
       "weight": 1.0
     },
     {
-      "source": "tests_git_reader_test_ts",
-      "target": "os",
+      "source": "vscode_extension_src_extension_ts",
+      "target": "src_calculator",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
+      "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L4",
       "weight": 1.0
     },
     {
-      "source": "tests_git_reader_test_ts",
-      "target": "child_process",
+      "source": "vscode_extension_src_extension_ts",
+      "target": "src_git_reader",
       "relation": "imports_from",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
+      "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L5",
       "weight": 1.0
     },
     {
-      "source": "tests_git_reader_test_ts",
-      "target": "src_git_reader",
-      "relation": "imports_from",
-      "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_git_reader_test_ts",
-      "target": "git_reader_test_maketestrepo",
+      "source": "vscode_extension_src_extension_ts",
+      "target": "extension_activate",
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\git-reader.test.ts",
-      "source_location": "L9",
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
-      "source": "tests_index_test_ts",
-      "target": "src_index",
-      "relation": "imports_from",
+      "source": "vscode_extension_src_extension_ts",
+      "target": "extension_showreportwebview",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\index.test.ts",
-      "source_location": "L2",
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
-      "source": "tests_parser_test_ts",
-      "target": "src_parser",
-      "relation": "imports_from",
+      "source": "vscode_extension_src_extension_ts",
+      "target": "extension_deactivate",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tests\\parser.test.ts",
-      "source_location": "L2",
+      "source_file": "vscode-extension\\src\\extension.ts",
+      "source_location": "L171",
       "weight": 1.0
-    },
-    {
-      "source": "readme",
-      "target": "promptsensei",
-      "relation": "describes",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_plan",
-      "target": "promptsensei",
-      "relation": "plans_implementation_of",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_design",
-      "target": "promptsensei",
-      "relation": "specifies_design_of",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "future_ideas",
-      "target": "promptsensei",
-      "relation": "proposes_features_for",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "sample_chat",
-      "target": "promptsensei",
-      "relation": "provides_sample_input_for",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "parse_log_fn",
-      "target": "turn",
-      "relation": "produces",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "calculate_waste_fn",
-      "target": "waste_report",
-      "relation": "produces",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "waste_report",
-      "target": "turn",
-      "relation": "contains_wasted",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "git_survival_detection",
-      "target": "calculate_waste_fn",
-      "relation": "feeds_into",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "negative_feedback_detection",
-      "target": "calculate_waste_fn",
-      "relation": "feeds_into",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "token_counting",
-      "target": "calculate_waste_fn",
-      "relation": "enables",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "tiktoken",
-      "target": "token_counting",
-      "relation": "implements",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "simple_git_dep",
-      "target": "get_git_content_fn",
-      "relation": "enables",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "simple_git_dep",
-      "target": "git_survival_detection",
-      "relation": "enables",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "generate_advice_fn",
-      "target": "gemini_api",
-      "relation": "calls_primary",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "generate_advice_fn",
-      "target": "openai_sdk",
-      "relation": "falls_back_to",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "review_command",
-      "target": "parse_log_fn",
-      "relation": "orchestrates",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "review_command",
-      "target": "calculate_waste_fn",
-      "relation": "orchestrates",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "review_command",
-      "target": "generate_advice_fn",
-      "relation": "orchestrates",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "review_session_tool",
-      "target": "parse_log_fn",
-      "relation": "orchestrates",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "review_session_tool",
-      "target": "calculate_waste_fn",
-      "relation": "orchestrates",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "review_session_tool",
-      "target": "generate_advice_fn",
-      "relation": "orchestrates",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_plan",
-      "target": "parse_log_fn",
-      "relation": "specifies_creation_of",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_plan",
-      "target": "calculate_waste_fn",
-      "relation": "specifies_creation_of",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_plan",
-      "target": "get_git_content_fn",
-      "relation": "specifies_creation_of",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_plan",
-      "target": "generate_advice_fn",
-      "relation": "specifies_creation_of",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_design",
-      "target": "parse_log_fn",
-      "relation": "defines_contract_of",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_design",
-      "target": "calculate_waste_fn",
-      "relation": "defines_contract_of",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_design",
-      "target": "get_git_content_fn",
-      "relation": "defines_contract_of",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_design",
-      "target": "generate_advice_fn",
-      "relation": "defines_contract_of",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_design",
-      "target": "turn",
-      "relation": "defines",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_design",
-      "target": "waste_report",
-      "relation": "defines",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_design",
-      "target": "git_survival_detection",
-      "relation": "defines",
-      "confidence": "EXTRACTED"
-    },
-    {
-      "source": "ai_coach_design",
-      "target": "negative_feedback_detection",
-      "relation": "defines",
-      "confidence": "EXTRACTED"
     },
     {
       "source": "future_ideas",
       "target": "ai_roi_dashboard",
-      "relation": "proposes",
+      "relation": "includes",
       "confidence": "EXTRACTED"
     },
     {
       "source": "future_ideas",
-      "target": "antipattern_detection",
-      "relation": "proposes",
+      "target": "anti_pattern_engine",
+      "relation": "includes",
       "confidence": "EXTRACTED"
     },
     {
       "source": "future_ideas",
-      "target": "diff_parser_feature",
-      "relation": "proposes",
+      "target": "diff_parser",
+      "relation": "includes",
       "confidence": "EXTRACTED"
     },
     {
       "source": "future_ideas",
-      "target": "github_action",
-      "relation": "proposes",
+      "target": "ci_cd_action",
+      "relation": "includes",
       "confidence": "EXTRACTED"
     },
     {
       "source": "future_ideas",
       "target": "optimize_command",
-      "relation": "proposes",
+      "relation": "includes",
       "confidence": "EXTRACTED"
     },
     {
-      "source": "antipattern_detection",
-      "target": "generate_advice_fn",
-      "relation": "would_extend",
-      "confidence": "INFERRED"
+      "source": "prompt_sensei",
+      "target": "features",
+      "relation": "describes",
+      "confidence": "EXTRACTED"
     },
     {
-      "source": "diff_parser_feature",
-      "target": "git_survival_detection",
-      "relation": "would_enhance",
-      "confidence": "INFERRED"
+      "source": "prompt_sensei",
+      "target": "getting_started",
+      "relation": "explains",
+      "confidence": "EXTRACTED"
     },
     {
-      "source": "github_action",
-      "target": "review_command",
-      "relation": "would_wrap",
-      "confidence": "INFERRED"
-    }
-  ],
-  "hyperedges": [
+      "source": "prompt_sensei",
+      "target": "standalone_cli",
+      "relation": "supports",
+      "confidence": "EXTRACTED"
+    },
     {
-      "id": "review_pipeline",
-      "label": "Shared Review Pipeline",
-      "members": [
-        "parse_log_fn",
-        "calculate_waste_fn",
-        "generate_advice_fn",
-        "review_command",
-        "review_session_tool"
-      ],
-      "relation": "form_shared_parse_calculate_advise_pipeline",
+      "source": "prompt_sensei",
+      "target": "mcp_server",
+      "relation": "integrates_with",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "prompt_sensei",
+      "target": "docker_toolkit",
+      "relation": "compatible_with",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "prompt_sensei",
+      "target": "tech_stack",
+      "relation": "built_with",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "prompt_sensei",
+      "target": "license",
+      "relation": "licensed_under",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "vscode_readme",
+      "target": "prompt_sensei",
+      "relation": "documents",
+      "confidence": "EXTRACTED"
+    },
+    {
+      "source": "vscode_readme",
+      "target": "icon",
+      "relation": "illustrates",
       "confidence": "EXTRACTED"
     }
   ],
+  "hyperedges": [],
   "input_tokens": 0,
   "output_tokens": 0
 }
