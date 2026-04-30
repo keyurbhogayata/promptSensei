@@ -7,7 +7,7 @@
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bhogayatakeyur/promptSensei"
+    "url": "https://github.com/keyurbhogayata/promptSensei.git"
   },
   "engines": {
     "vscode": "^1.90.0"
@@ -19,9 +19,8 @@
   "keywords": [
     "mcp",
     "ai",
-    "token",
-    "prompt",
-    "coaching"
+    "token-wastage",
+    "prompt-engineering"
   ],
   "activationEvents": [
     "onStartupFinished"
