@@ -45,4 +45,26 @@ x = 1
     expect(turns.length).toBe(2);
     expect(turns[1].assistantCodeBlocks).toContain('x = 1');
   });
+
+  it('should extract code from SEARCH/REPLACE blocks', () => {
+    const logContent = `
+## User
+Change the function
+
+## Assistant
+I will update it:
+\`\`\`
+<<<< SEARCH
+function old() {}
+====
+function updated() {
+  console.log("Improved");
+}
+>>>>
+\`\`\`
+`;
+    const turns = parseLog(logContent);
+    expect(turns.length).toBe(1);
+    expect(turns[0].assistantCodeBlocks).toContain('function updated() {\n  console.log("Improved");\n}');
+  });
 });

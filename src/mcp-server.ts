@@ -41,6 +41,11 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
               description:
                 'Optional. Absolute path to the git project directory. When provided, the tool automatically reads the working tree instead of using finalFileContent.',
             },
+            modelProvider: {
+              type: 'string',
+              enum: ['gpt-5-5', 'claude-4-7-opus', 'claude-4-7-sonnet', 'claude-4-7-haiku', 'gemini-3-1-pro', 'gemini-3-1-flash', 'generic'],
+              description: 'Optional. The AI model used in the session. Affects token counting accuracy and price estimates.',
+            },
           },
           required: ['logContent', 'finalFileContent'],
         },
@@ -66,7 +71,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       : callerFileContent;
 
     const turns = parseLog(logContent);
-    const report: WasteReport = await calculateWaste(turns, finalFileContent);
+    const modelProvider = (args['modelProvider'] as any) || 'generic';
+    const report: WasteReport = await calculateWaste(turns, finalFileContent, modelProvider);
 
     const wastedPct =
       report.totalTokens > 0

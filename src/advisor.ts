@@ -22,28 +22,3 @@ export function generateCoachingPrompt(turns: Turn[], wastedIndices: number[]): 
   return prompt.trim();
 }
 
-export async function getAdviceFromLLM(prompt: string): Promise<string> {
-  const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
-  if (!apiKey) {
-    return '';
-  }
-
-  try {
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }]
-      })
-    });
-
-    if (!response.ok) {
-      return `Failed to fetch advice (API Error: ${response.status})`;
-    }
-
-    const data = await response.json() as any;
-    return data?.candidates?.[0]?.content?.parts?.[0]?.text || 'No advice generated.';
-  } catch (error) {
-    return 'Failed to fetch advice from LLM.';
-  }
-}

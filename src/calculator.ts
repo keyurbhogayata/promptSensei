@@ -9,17 +9,41 @@ export interface WasteReport {
   wastedTurns: number[];
 }
 
+export type ModelProvider = 'gpt-5-5' | 'claude-4-7-opus' | 'claude-4-7-sonnet' | 'claude-4-7-haiku' | 'gemini-3-1-pro' | 'gemini-3-1-flash' | 'generic';
+
+export interface ModelProfile {
+  name: string;
+  pricePerMillion: number; // USD
+  tokenizer: 'cl100k' | 'char-approx';
+}
+
+const MODEL_PROFILES: Record<ModelProvider, ModelProfile> = {
+  'gpt-5-5': { name: 'GPT-5.5 (Agentic)', pricePerMillion: 5.0, tokenizer: 'cl100k' },
+  'claude-4-7-opus': { name: 'Claude 4.7 Opus', pricePerMillion: 8.0, tokenizer: 'cl100k' },
+  'claude-4-7-sonnet': { name: 'Claude 4.7 Sonnet', pricePerMillion: 3.0, tokenizer: 'cl100k' },
+  'claude-4-7-haiku': { name: 'Claude 4.7 Haiku', pricePerMillion: 0.25, tokenizer: 'cl100k' },
+  'gemini-3-1-pro': { name: 'Gemini 3.1 Pro', pricePerMillion: 1.25, tokenizer: 'char-approx' },
+  'gemini-3-1-flash': { name: 'Gemini 3.1 Flash', pricePerMillion: 0.05, tokenizer: 'char-approx' },
+  'generic': { name: 'Generic Frontier Model', pricePerMillion: 2.0, tokenizer: 'cl100k' },
+};
+
 /**
- * Precise token estimator using BPE (cl100k_base).
+ * Estimator using chosen strategy.
  */
-function countTokens(text: string): number {
+function countTokens(text: string, profile: ModelProfile): number {
   if (!text.trim()) return 0;
-  return encode(text).length;
+  
+  if (profile.tokenizer === 'cl100k') {
+    return encode(text).length;
+  } else {
+    // Gemini/Character-based approximation (approx 4 chars per token)
+    return Math.ceil(text.length / 4);
+  }
 }
 
 /**
  * Checks if any of the code blocks generated in a turn survived into the final tree.
- * Uses a whitespace-stripped fingerprint to be robust against formatting changes.
+ * Uses multi-anchor fingerprinting to be robust against partial changes or generic headers.
  */
 function codeFoundInFinalTree(codeBlocks: string[], finalTreeContent: string): boolean {
   const strippedFinal = finalTreeContent.replace(/\s+/g, '');
@@ -27,25 +51,36 @@ function codeFoundInFinalTree(codeBlocks: string[], finalTreeContent: string): b
 
   return codeBlocks.some((code) => {
     const strippedCode = code.replace(/\s+/g, '');
-    // Take the first 40 non-whitespace characters as a fingerprint
-    const fingerprint = strippedCode.substring(0, 40);
-    return fingerprint.length > 0 && strippedFinal.includes(fingerprint);
+    if (strippedCode.length < 20) return strippedFinal.includes(strippedCode);
+
+    // Multi-anchor fingerprinting: check start, middle, and end
+    const len = strippedCode.length;
+    const fingerprints = [
+      strippedCode.substring(0, 50), // Start
+      strippedCode.substring(Math.floor(len / 2) - 25, Math.floor(len / 2) + 25), // Middle
+      strippedCode.substring(len - 50), // End
+    ].filter(f => f.length >= 20);
+
+    // If any significant anchor is found, we assume the code (or its logic) survived
+    return fingerprints.some((f) => strippedFinal.includes(f));
   });
 }
 
 export async function calculateWaste(
   turns: Turn[],
-  finalTreeContent: string
+  finalTreeContent: string,
+  provider: ModelProvider = 'generic'
 ): Promise<WasteReport> {
+  const profile = MODEL_PROFILES[provider] || MODEL_PROFILES['generic'];
   let totalTokens = 0;
   let wastedTokens = 0;
   const wastedTurnsSet = new Set<number>();
 
   for (let i = 0; i < turns.length; i++) {
     const turn = turns[i];
-    const userTokens = countTokens(turn.user);
+    const userTokens = countTokens(turn.user, profile);
     const codeTokens = turn.assistantCodeBlocks.reduce(
-      (acc, code) => acc + countTokens(code),
+      (acc, code) => acc + countTokens(code, profile),
       0
     );
     const turnTokens = userTokens + codeTokens;
@@ -60,26 +95,29 @@ export async function calculateWaste(
       wastedTurnsSet.add(i);
     }
 
-    // Flag the previous turn as wasted if this turn contains negative feedback patterns
-    const negFeedbackPatterns = /\b(error|wrong|no|fix|broken|failed|incorrect|redo|again)\b/i;
-    if (negFeedbackPatterns.test(turn.user) && i > 0 && !wastedTurnsSet.has(i - 1)) {
+    // Flag the previous turn as wasted if this turn contains explicit negative feedback
+    const negFeedbackPatterns = /\b(error|wrong|fix|broken|failed|incorrect|redo|not work|instead of|refactor again)\b/i;
+    const falsePositivePatterns = /\b(no error|no problem|no issues|without error)\b/i;
+
+    if (
+      negFeedbackPatterns.test(turn.user) && 
+      !falsePositivePatterns.test(turn.user) &&
+      i > 0 && 
+      !wastedTurnsSet.has(i - 1)
+    ) {
       wastedTurnsSet.add(i - 1);
-      // Approximate the previous turn's tokens if not already counted
       const prevTurn = turns[i - 1];
       const prevTokens =
-        countTokens(prevTurn.user) +
-        prevTurn.assistantCodeBlocks.reduce((acc, c) => acc + countTokens(c), 0);
+        countTokens(prevTurn.user, profile) +
+        prevTurn.assistantCodeBlocks.reduce((acc, c) => acc + countTokens(c, profile), 0);
       wastedTokens += prevTokens;
     }
   }
 
-  // Price based on average of input/output cost (~$3/1M tokens for mid-tier models)
-  const PRICE_PER_TOKEN = 3.0 / 1_000_000;
-
   return {
     totalTokens,
     wastedTokens,
-    moneyWasted: wastedTokens * PRICE_PER_TOKEN,
+    moneyWasted: wastedTokens * (profile.pricePerMillion / 1_000_000),
     wastedTurns: [...wastedTurnsSet].sort((a, b) => a - b),
   };
 }

@@ -45,4 +45,54 @@ describe('calculateWaste', () => {
     const report = await calculateWaste(turns, '');
     expect(report.moneyWasted).toBeGreaterThanOrEqual(0);
   });
+
+  it('should detect code survival even if only the middle part matches (multi-anchor)', async () => {
+    // Shared core logic that should survive
+    const coreLogic = 'function calculateInternal(val) { return val * 42 + Math.sqrt(val); }';
+    const longCode = `/* License Header A */\n${coreLogic}\n// Footer A`;
+    const turns: Turn[] = [{
+      user: 'Write complex logic',
+      assistantCodeBlocks: [longCode]
+    }];
+
+    // Final tree has different header/footer but same core logic
+    const finalTree = `// Different Header B\n${coreLogic}\n/* Different Footer B */`;
+
+    const report = await calculateWaste(turns, finalTree);
+    expect(report.wastedTurns).not.toContain(0);
+  });
+
+  it('should NOT flag waste for false positive feedback like "no error"', async () => {
+    const turns: Turn[] = [
+      { user: 'Write a function', assistantCodeBlocks: ['const x = 1;'] },
+      { user: 'There is no error here, good job.', assistantCodeBlocks: [] }
+    ];
+    // Final tree has the code
+    const report = await calculateWaste(turns, 'const x = 1;');
+    expect(report.wastedTurns).not.toContain(0);
+  });
+
+  it('should flag waste for explicit negative feedback like "instead of"', async () => {
+    const turns: Turn[] = [
+      { user: 'Write a function', assistantCodeBlocks: ['const x = 1;'] },
+      { user: 'I wanted y instead of x', assistantCodeBlocks: [] }
+    ];
+    // Final tree doesn't have x
+    const report = await calculateWaste(turns, 'const y = 1;');
+    expect(report.wastedTurns).toContain(0);
+  });
+  
+  it('should use different token counting for Gemini (char-approx) vs OpenAI (cl100k)', async () => {
+    const turns: Turn[] = [{
+      user: 'Long prompt with many characters but few tokens',
+      assistantCodeBlocks: ['const x = 1;']
+    }];
+    
+    const reportGPT = await calculateWaste(turns, '', 'gpt-5-5');
+    const reportGemini = await calculateWaste(turns, '', 'gemini-3-1-flash');
+    
+    // Character approximation for Gemini (chars/4) vs BPE for GPT
+    expect(reportGPT.totalTokens).not.toBe(reportGemini.totalTokens);
+    expect(reportGemini.moneyWasted).toBeLessThan(reportGPT.moneyWasted);
+  });
 });

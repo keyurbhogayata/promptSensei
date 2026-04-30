@@ -41,12 +41,50 @@ export function parseLog(content: string): Turn[] {
 
 function createTurn(userText: string, assistantText: string): Turn {
   const codeBlocks: string[] = [];
+  
+  // 1. Standard Markdown Code Blocks
   const codeRegex = /```[\w]*\n([\s\S]*?)```/g;
   let match;
   while ((match = codeRegex.exec(assistantText)) !== null) {
-    if (match[1].trim()) {
-      codeBlocks.push(match[1].trim());
+    const blockContent = match[1].trim();
+    if (blockContent) {
+      // Check if this block contains SEARCH/REPLACE blocks
+      const srBlocks = extractSearchReplace(blockContent);
+      if (srBlocks.length > 0) {
+        codeBlocks.push(...srBlocks);
+      } else {
+        codeBlocks.push(blockContent);
+      }
     }
   }
+
+  // 2. Loose SEARCH/REPLACE blocks (not wrapped in code blocks)
+  const looseSR = extractSearchReplace(assistantText);
+  // Avoid duplicates if they were already found inside code blocks
+  looseSR.forEach(block => {
+    if (!codeBlocks.includes(block)) {
+      codeBlocks.push(block);
+    }
+  });
+
   return { user: userText.trim(), assistantCodeBlocks: codeBlocks };
+}
+
+/**
+ * Extracts the 'REPLACE' part of SEARCH/REPLACE blocks.
+ */
+function extractSearchReplace(text: string): string[] {
+  const results: string[] = [];
+  const srRegex = /<<<<<<< SEARCH[\s\S]*?=======([\s\S]*?)>>>>>>>/g;
+  const srRegexAlternative = /<<<< SEARCH[\s\S]*?====([\s\S]*?)>>>>/g;
+  
+  let match;
+  while ((match = srRegex.exec(text)) !== null) {
+    if (match[1].trim()) results.push(match[1].trim());
+  }
+  while ((match = srRegexAlternative.exec(text)) !== null) {
+    if (match[1].trim()) results.push(match[1].trim());
+  }
+  
+  return results;
 }

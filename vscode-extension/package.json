@@ -2,7 +2,7 @@
   "name": "promptsensei",
   "displayName": "PromptSensei",
   "description": "Analyze AI chat sessions for wasted tokens and get coaching advice directly in VS Code via MCP.",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "publisher": "KeyurBhogayata",
   "icon": "images/icon.png",
   "repository": {
@@ -28,6 +28,29 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "promptsensei.auditChat",
+        "title": "PromptSensei: Audit Current Chat Session",
+        "category": "PromptSensei"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "promptsensei.auditChat",
+          "when": "resourceExtname == .md",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "promptsensei.auditChat",
+          "when": "resourceExtname == .md",
+          "group": "9_cutcopypaste"
+        }
+      ]
+    },
     "mcpServerDefinitionProviders": [
       {
         "id": "promptsensei.server"

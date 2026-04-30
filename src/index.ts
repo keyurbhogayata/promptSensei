@@ -1,4 +1,2 @@
 // src/index.ts
-export function runCoach() {
-  return { success: true, message: 'PromptSensei initialized' };
-}
+// This file can be used to export core library functionality if needed in the future.
