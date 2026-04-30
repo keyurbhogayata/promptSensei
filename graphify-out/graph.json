@@ -276,114 +276,114 @@
     {
       "label": "Future Ideas for PromptSensei",
       "file_type": "document",
-      "id": "future_ideas",
       "community": 2,
-      "norm_label": "future ideas for promptsensei"
+      "norm_label": "future ideas for promptsensei",
+      "id": "future_ideas"
     },
     {
       "label": "AI ROI Dashboard",
       "file_type": "document",
-      "id": "ai_roi_dashboard",
       "community": 2,
-      "norm_label": "ai roi dashboard"
+      "norm_label": "ai roi dashboard",
+      "id": "ai_roi_dashboard"
     },
     {
       "label": "Anti-Pattern Detection Engine",
       "file_type": "document",
-      "id": "anti_pattern_engine",
       "community": 2,
-      "norm_label": "anti-pattern detection engine"
+      "norm_label": "anti-pattern detection engine",
+      "id": "anti_pattern_engine"
     },
     {
       "label": "Smart Search/Replace Diff Parser",
       "file_type": "document",
-      "id": "diff_parser",
       "community": 2,
-      "norm_label": "smart search/replace diff parser"
+      "norm_label": "smart search/replace diff parser",
+      "id": "diff_parser"
     },
     {
       "label": "CI/CD GitHub Action",
       "file_type": "document",
-      "id": "ci_cd_action",
       "community": 2,
-      "norm_label": "ci/cd github action"
+      "norm_label": "ci/cd github action",
+      "id": "ci_cd_action"
     },
     {
       "label": "promptsensei optimize Command",
       "file_type": "document",
-      "id": "optimize_command",
       "community": 2,
-      "norm_label": "promptsensei optimize command"
+      "norm_label": "promptsensei optimize command",
+      "id": "optimize_command"
     },
     {
       "label": "PromptSensei",
       "file_type": "document",
-      "id": "prompt_sensei",
       "community": 0,
-      "norm_label": "promptsensei"
+      "norm_label": "promptsensei",
+      "id": "prompt_sensei"
     },
     {
       "label": "Features",
       "file_type": "document",
-      "id": "features",
       "community": 0,
-      "norm_label": "features"
+      "norm_label": "features",
+      "id": "features"
     },
     {
       "label": "Getting Started",
       "file_type": "document",
-      "id": "getting_started",
       "community": 0,
-      "norm_label": "getting started"
+      "norm_label": "getting started",
+      "id": "getting_started"
     },
     {
       "label": "Standalone CLI Mode",
       "file_type": "document",
-      "id": "standalone_cli",
       "community": 0,
-      "norm_label": "standalone cli mode"
+      "norm_label": "standalone cli mode",
+      "id": "standalone_cli"
     },
     {
       "label": "MCP Server Mode",
       "file_type": "document",
-      "id": "mcp_server",
       "community": 0,
-      "norm_label": "mcp server mode"
+      "norm_label": "mcp server mode",
+      "id": "mcp_server"
     },
     {
       "label": "Docker MCP Toolkit",
       "file_type": "document",
-      "id": "docker_toolkit",
       "community": 0,
-      "norm_label": "docker mcp toolkit"
+      "norm_label": "docker mcp toolkit",
+      "id": "docker_toolkit"
     },
     {
       "label": "Tech Stack",
       "file_type": "document",
-      "id": "tech_stack",
       "community": 0,
-      "norm_label": "tech stack"
+      "norm_label": "tech stack",
+      "id": "tech_stack"
     },
     {
       "label": "License",
       "file_type": "document",
-      "id": "license",
       "community": 0,
-      "norm_label": "license"
+      "norm_label": "license",
+      "id": "license"
     },
     {
       "label": "VSCode Extension README",
       "file_type": "document",
-      "id": "vscode_readme",
       "community": 0,
-      "norm_label": "vscode extension readme"
+      "norm_label": "vscode extension readme",
+      "id": "vscode_readme"
     },
     {
       "label": "Icon",
       "file_type": "image",
-      "id": "icon",
       "community": 0,
-      "norm_label": "icon"
+      "norm_label": "icon",
+      "id": "icon"
     }
   ],
   "links": [
@@ -716,126 +716,126 @@
       "confidence": "EXTRACTED",
       "_src": "future_ideas",
       "_tgt": "ai_roi_dashboard",
+      "confidence_score": 1.0,
       "source": "future_ideas",
-      "target": "ai_roi_dashboard",
-      "confidence_score": 1.0
+      "target": "ai_roi_dashboard"
     },
     {
       "relation": "includes",
       "confidence": "EXTRACTED",
       "_src": "future_ideas",
       "_tgt": "anti_pattern_engine",
+      "confidence_score": 1.0,
       "source": "future_ideas",
-      "target": "anti_pattern_engine",
-      "confidence_score": 1.0
+      "target": "anti_pattern_engine"
     },
     {
       "relation": "includes",
       "confidence": "EXTRACTED",
       "_src": "future_ideas",
       "_tgt": "diff_parser",
+      "confidence_score": 1.0,
       "source": "future_ideas",
-      "target": "diff_parser",
-      "confidence_score": 1.0
+      "target": "diff_parser"
     },
     {
       "relation": "includes",
       "confidence": "EXTRACTED",
       "_src": "future_ideas",
       "_tgt": "ci_cd_action",
+      "confidence_score": 1.0,
       "source": "future_ideas",
-      "target": "ci_cd_action",
-      "confidence_score": 1.0
+      "target": "ci_cd_action"
     },
     {
       "relation": "includes",
       "confidence": "EXTRACTED",
       "_src": "future_ideas",
       "_tgt": "optimize_command",
+      "confidence_score": 1.0,
       "source": "future_ideas",
-      "target": "optimize_command",
-      "confidence_score": 1.0
+      "target": "optimize_command"
     },
     {
       "relation": "describes",
       "confidence": "EXTRACTED",
       "_src": "prompt_sensei",
       "_tgt": "features",
+      "confidence_score": 1.0,
       "source": "prompt_sensei",
-      "target": "features",
-      "confidence_score": 1.0
+      "target": "features"
     },
     {
       "relation": "explains",
       "confidence": "EXTRACTED",
       "_src": "prompt_sensei",
       "_tgt": "getting_started",
+      "confidence_score": 1.0,
       "source": "prompt_sensei",
-      "target": "getting_started",
-      "confidence_score": 1.0
+      "target": "getting_started"
     },
     {
       "relation": "supports",
       "confidence": "EXTRACTED",
       "_src": "prompt_sensei",
       "_tgt": "standalone_cli",
+      "confidence_score": 1.0,
       "source": "prompt_sensei",
-      "target": "standalone_cli",
-      "confidence_score": 1.0
+      "target": "standalone_cli"
     },
     {
       "relation": "integrates_with",
       "confidence": "EXTRACTED",
       "_src": "prompt_sensei",
       "_tgt": "mcp_server",
+      "confidence_score": 1.0,
       "source": "prompt_sensei",
-      "target": "mcp_server",
-      "confidence_score": 1.0
+      "target": "mcp_server"
     },
     {
       "relation": "compatible_with",
       "confidence": "EXTRACTED",
       "_src": "prompt_sensei",
       "_tgt": "docker_toolkit",
+      "confidence_score": 1.0,
       "source": "prompt_sensei",
-      "target": "docker_toolkit",
-      "confidence_score": 1.0
+      "target": "docker_toolkit"
     },
     {
       "relation": "built_with",
       "confidence": "EXTRACTED",
       "_src": "prompt_sensei",
       "_tgt": "tech_stack",
+      "confidence_score": 1.0,
       "source": "prompt_sensei",
-      "target": "tech_stack",
-      "confidence_score": 1.0
+      "target": "tech_stack"
     },
     {
       "relation": "licensed_under",
       "confidence": "EXTRACTED",
       "_src": "prompt_sensei",
       "_tgt": "license",
+      "confidence_score": 1.0,
       "source": "prompt_sensei",
-      "target": "license",
-      "confidence_score": 1.0
+      "target": "license"
     },
     {
       "relation": "documents",
       "confidence": "EXTRACTED",
       "_src": "prompt_sensei",
       "_tgt": "vscode_readme",
+      "confidence_score": 1.0,
       "source": "prompt_sensei",
-      "target": "vscode_readme",
-      "confidence_score": 1.0
+      "target": "vscode_readme"
     },
     {
       "relation": "illustrates",
       "confidence": "EXTRACTED",
       "_src": "vscode_readme",
       "_tgt": "icon",
+      "confidence_score": 1.0,
       "source": "vscode_readme",
-      "target": "icon",
-      "confidence_score": 1.0
+      "target": "icon"
     }
   ],
   "hyperedges": []

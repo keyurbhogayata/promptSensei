@@ -1,7 +1,7 @@
 # Graph Report - C:\Users\KeyurBhogayata\.gemini\antigravity\scratch\promptSensei  (2026-04-30)
 
 ## Corpus Check
-- 11 files · ~18,351 words
+- 11 files · ~19,097 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
