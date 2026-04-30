@@ -1,7 +1,8 @@
-# Graph Report - .  (2026-04-30)
+# Graph Report - C:\Users\KeyurBhogayata\.gemini\antigravity\scratch\promptSensei  (2026-04-30)
 
 ## Corpus Check
-- Corpus is ~18,351 words - fits in a single context window. You may not need a graph.
+- 11 files · ~18,351 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 - 46 nodes · 41 edges · 12 communities detected
@@ -40,51 +41,51 @@
 ## Communities
 
 ### Community 0 - "Community 0"
-Cohesion: 0.0
+Cohesion: 0.2
 Nodes (10): Docker MCP Toolkit, Features, Getting Started, Icon, License, MCP Server Mode, PromptSensei, Standalone CLI Mode (+2 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.0
+Cohesion: 0.33
 Nodes (0): 
 
 ### Community 2 - "Community 2"
-Cohesion: 0.0
+Cohesion: 0.33
 Nodes (6): AI ROI Dashboard, Anti-Pattern Detection Engine, CI/CD GitHub Action, Smart Search/Replace Diff Parser, Future Ideas for PromptSensei, promptsensei optimize Command
 
 ### Community 3 - "Community 3"
-Cohesion: 0.0
+Cohesion: 0.5
 Nodes (2): activate(), deactivate()
 
 ### Community 4 - "Community 4"
-Cohesion: 0.0
+Cohesion: 0.83
 Nodes (3): calculateWaste(), codeFoundInFinalTree(), countTokens()
 
 ### Community 5 - "Community 5"
-Cohesion: 0.0
+Cohesion: 0.83
 Nodes (3): isGitRepo(), isReadable(), readGitWorkingTree()
 
 ### Community 6 - "Community 6"
-Cohesion: 0.0
+Cohesion: 0.83
 Nodes (3): createTurn(), extractSearchReplace(), parseLog()
 
 ### Community 7 - "Community 7"
-Cohesion: 0.0
+Cohesion: 1.0
 Nodes (0): 
 
 ### Community 8 - "Community 8"
-Cohesion: 0.0
+Cohesion: 1.0
 Nodes (0): 
 
 ### Community 9 - "Community 9"
-Cohesion: 0.0
+Cohesion: 1.0
 Nodes (0): 
 
 ### Community 10 - "Community 10"
-Cohesion: 0.0
+Cohesion: 1.0
 Nodes (0): 
 
 ### Community 11 - "Community 11"
-Cohesion: 0.0
+Cohesion: 1.0
 Nodes (0): 
 
 ## Knowledge Gaps
@@ -98,3 +99,6 @@ Nodes (0):
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 11`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+
+## Suggested Questions
+_Not enough signal to generate questions. This usually means the corpus has no AMBIGUOUS edges, no bridge nodes, no INFERRED relationships, and all communities are tightly cohesive. Add more files or run with --mode deep to extract richer edges._
