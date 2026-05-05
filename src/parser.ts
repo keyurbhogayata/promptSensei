@@ -74,7 +74,10 @@ function createTurn(userText: string, assistantText: string): Turn {
     }
   });
 
-  return { user: userText.trim(), assistantCodeBlocks: codeBlocks, assistantDiffs: [] };
+  // 3. Unified Diffs
+  const unifiedDiffs = extractUnifiedDiffs(assistantText);
+
+  return { user: userText.trim(), assistantCodeBlocks: codeBlocks, assistantDiffs: unifiedDiffs };
 }
 
 /**
@@ -94,4 +97,42 @@ function extractSearchReplace(text: string): string[] {
   }
   
   return results;
+}
+
+/**
+ * Extracts and parses Unified Diff blocks.
+ */
+function extractUnifiedDiffs(text: string): ParsedDiff[] {
+  const results: ParsedDiff[] = [];
+  const diffRegex = /```(?:diff|patch)\n([\s\S]*?)```/g;
+  let match;
+  while ((match = diffRegex.exec(text)) !== null) {
+    const diffContent = match[1].trim();
+    const diffs = parseDiffContent(diffContent);
+    results.push(...diffs);
+  }
+  return results;
+}
+
+function parseDiffContent(content: string): ParsedDiff[] {
+  const diffs: ParsedDiff[] = [];
+  let currentDiff: ParsedDiff | null = null;
+
+  const lines = content.split('\n');
+  for (const line of lines) {
+    if (line.startsWith('+++ ')) {
+      let targetFile = line.substring(4).trim();
+      if (targetFile.startsWith('b/')) {
+        targetFile = targetFile.substring(2);
+      }
+      currentDiff = { targetFile, searchLines: [], addedLines: [] };
+      diffs.push(currentDiff);
+    } else if (line.startsWith('+') && !line.startsWith('+++') && currentDiff) {
+      currentDiff.addedLines.push(line.substring(1));
+    } else if (line.startsWith('-') && !line.startsWith('---') && currentDiff) {
+      currentDiff.searchLines.push(line.substring(1));
+    }
+  }
+
+  return diffs;
 }

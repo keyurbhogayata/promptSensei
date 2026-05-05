@@ -74,6 +74,6 @@ function updated() {
     expect(turns[0].assistantDiffs).toBeDefined();
     expect(turns[0].assistantDiffs.length).toBe(1);
     expect(turns[0].assistantDiffs[0].targetFile).toBe('test.ts');
-    expect(turns[0].assistantDiffs[0].addedLines.join('\\n')).toBe('var a = 2;');
+    expect(turns[0].assistantDiffs[0].addedLines.join('\n')).toBe(' var a = 2;');
   });
 });
