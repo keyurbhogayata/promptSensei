@@ -26,6 +26,12 @@ export function detectAntiPatterns(turns: Turn[]): AntiPatternReport[] {
       patterns.push('Context Dumping');
     }
 
+    // One More Thing Trap: Turn index >= 3 and starts with specific "add-on" phrases
+    const oneMoreThingPhrases = ['also', 'one more thing', 'by the way', 'additionally', 'wait'];
+    if (index >= 3 && oneMoreThingPhrases.some(phrase => userInput.startsWith(phrase))) {
+      patterns.push('One More Thing Trap');
+    }
+
     if (patterns.length > 0) {
       reports.push({
         turnIndex: index,

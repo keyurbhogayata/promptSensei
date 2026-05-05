@@ -37,4 +37,17 @@ describe('Anti-Pattern Detection', () => {
     expect(result.length).toBe(1);
     expect(result[0].antiPatterns).toContain('Context Dumping');
   });
+
+  it('should detect One More Thing Trap on late turns', () => {
+    const turns: Turn[] = [
+      { user: '1', assistantCodeBlocks: [], assistantDiffs: [] },
+      { user: '2', assistantCodeBlocks: [], assistantDiffs: [] },
+      { user: '3', assistantCodeBlocks: [], assistantDiffs: [] },
+      { user: 'also can you do this', assistantCodeBlocks: [], assistantDiffs: [] } // Turn index 3 (4th turn)
+    ];
+    const result = detectAntiPatterns(turns);
+    expect(result.length).toBe(1);
+    expect(result[0].turnIndex).toBe(3);
+    expect(result[0].antiPatterns).toContain('One More Thing Trap');
+  });
 });
