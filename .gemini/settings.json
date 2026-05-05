@@ -11,5 +11,13 @@
         ]
       }
     ]
+  },
+  "mcp": {
+    "servers": {
+      "ruflo": {
+        "command": "npx",
+        "args": ["-y", "ruflo", "mcp", "start"]
+      }
+    }
   }
 }
