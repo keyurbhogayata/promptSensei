@@ -10,6 +10,9 @@ import { parseLog } from './parser';
 import { calculateWaste, WasteReport } from './calculator';
 import { readGitWorkingTree } from './git-reader';
 import { generateCoachingPrompt } from './advisor';
+import * as path from 'path';
+import { GraphClient } from './graphClient';
+import { OptimizerEngine } from './optimizer';
 
 const server = new Server(
   { name: 'mcp-token-audit', version: '1.0.0' },
@@ -49,6 +52,17 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           },
           required: ['logContent', 'finalFileContent'],
         },
+      },
+      {
+        name: 'get_optimized_context',
+        description: 'Returns a pruned list of files relevant to the user prompt.',
+        inputSchema: {
+          type: 'object' as const,
+          properties: {
+            prompt: { type: 'string' }
+          },
+          required: ['prompt']
+        }
       },
     ],
   };
@@ -102,6 +116,28 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         {
           type: 'text' as const,
           text: JSON.stringify(finalReport, null, 2),
+        },
+      ],
+    };
+  }
+
+  if (request.params.name === 'get_optimized_context') {
+    const args = request.params.arguments as Record<string, unknown>;
+    const prompt = args['prompt'] as string;
+    
+    if (!prompt || typeof prompt !== 'string') {
+      throw new Error('prompt is required and must be a string');
+    }
+
+    const client = new GraphClient(path.join(process.cwd(), 'graphify-out', 'graph.json'));
+    const engine = new OptimizerEngine(client);
+    const files = await engine.optimize(prompt);
+    
+    return {
+      content: [
+        {
+          type: 'text' as const,
+          text: JSON.stringify({ optimizedFiles: files }, null, 2),
         },
       ],
     };

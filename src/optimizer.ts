@@ -8,7 +8,10 @@ export class OptimizerEngine {
 
   async optimize(prompt: string): Promise<string[]> {
     if (!this.loaded) {
-      await this.client.load();
+      const success = await this.client.load();
+      if (!success) {
+        throw new Error("Failed to load knowledge graph from graphify-out/graph.json. Please run graphify first.");
+      }
       this.loaded = true;
     }
     const words = prompt.split(/\W+/);
