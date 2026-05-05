@@ -109,3 +109,12 @@ Rules:
 - Before answering architecture or codebase questions, read graphify-out/GRAPH_REPORT.md for god nodes and community structure
 - If graphify-out/wiki/index.md exists, navigate it instead of reading raw files
 - After modifying code files in this session, run `graphify update .` to keep the graph current (AST-only, no API cost)
+
+## Ruflo Integration
+
+This project is configured to use the **Ruflo** multi-agent orchestration framework via MCP.
+
+### Usage
+- **MCP Tools:** Gemini CLI has access to 300+ Ruflo tools. Use them for specialized tasks like security audits, deep memory search, or swarm coordination.
+- **Agents:** If a task is too complex for a single agent, you can spawn a Ruflo swarm using `ruflo hive-mind spawn` or leverage the `@agent` tools exposed via MCP.
+- **Optimization:** Ruflo's Token Optimizer and Learning Loop (SONA) are active to reduce context usage and remember project patterns.
