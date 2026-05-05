@@ -95,4 +95,39 @@ describe('calculateWaste', () => {
     expect(reportGPT.totalTokens).not.toBe(reportGemini.totalTokens);
     expect(reportGemini.moneyWasted).toBeLessThan(reportGPT.moneyWasted);
   });
+
+  it('should flag a turn as wasted if diff addedLines are not in final tree', async () => {
+    const turns: Turn[] = [{
+      user: 'Update the file',
+      assistantCodeBlocks: [],
+      assistantDiffs: [{
+        targetFile: 'a.js',
+        searchLines: [],
+        addedLines: ['function newLogic() { return true; }']
+      }]
+    }];
+
+    const finalTreeContent = 'function subtract(a, b) { return a - b; }';
+
+    const report = await calculateWaste(turns, finalTreeContent);
+    expect(report.wastedTokens).toBeGreaterThan(0);
+    expect(report.wastedTurns).toContain(0);
+  });
+
+  it('should NOT flag a turn as wasted if diff addedLines survive', async () => {
+    const turns: Turn[] = [{
+      user: 'Update the file',
+      assistantCodeBlocks: [],
+      assistantDiffs: [{
+        targetFile: 'a.js',
+        searchLines: [],
+        addedLines: ['function newLogic() { return true; }']
+      }]
+    }];
+
+    const finalTreeContent = 'function something() {}\nfunction newLogic() { return true; }';
+
+    const report = await calculateWaste(turns, finalTreeContent);
+    expect(report.wastedTurns).not.toContain(0);
+  });
 });

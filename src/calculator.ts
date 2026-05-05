@@ -1,6 +1,6 @@
 // src/calculator.ts
 import { encode } from 'gpt-tokenizer';
-import { Turn } from './parser';
+import { Turn, ParsedDiff } from './parser';
 
 export interface WasteReport {
   totalTokens: number;
@@ -42,14 +42,16 @@ function countTokens(text: string, profile: ModelProfile): number {
 }
 
 /**
- * Checks if any of the code blocks generated in a turn survived into the final tree.
+ * Checks if any of the code blocks or parsed diffs generated in a turn survived into the final tree.
  * Uses multi-anchor fingerprinting to be robust against partial changes or generic headers.
  */
-function codeFoundInFinalTree(codeBlocks: string[], finalTreeContent: string): boolean {
+function codeFoundInFinalTree(codeBlocks: string[], diffs: ParsedDiff[], finalTreeContent: string): boolean {
+  if (codeBlocks.length === 0 && diffs.length === 0) return true;
+
   const strippedFinal = finalTreeContent.replace(/\s+/g, '');
   if (!strippedFinal) return false;
 
-  return codeBlocks.some((code) => {
+  const isBlockFound = codeBlocks.some((code) => {
     const strippedCode = code.replace(/\s+/g, '');
     if (strippedCode.length < 20) return strippedFinal.includes(strippedCode);
 
@@ -62,6 +64,24 @@ function codeFoundInFinalTree(codeBlocks: string[], finalTreeContent: string): b
     ].filter(f => f.length >= 20);
 
     // If any significant anchor is found, we assume the code (or its logic) survived
+    return fingerprints.some((f) => strippedFinal.includes(f));
+  });
+
+  if (isBlockFound) return true;
+
+  return diffs.some((diff) => {
+    if (diff.addedLines.length === 0) return false;
+    const addedCode = diff.addedLines.join('\n');
+    const strippedCode = addedCode.replace(/\s+/g, '');
+    if (strippedCode.length < 20) return strippedFinal.includes(strippedCode);
+
+    const len = strippedCode.length;
+    const fingerprints = [
+      strippedCode.substring(0, 50),
+      strippedCode.substring(Math.floor(len / 2) - 25, Math.floor(len / 2) + 25),
+      strippedCode.substring(len - 50),
+    ].filter(f => f.length >= 20);
+
     return fingerprints.some((f) => strippedFinal.includes(f));
   });
 }
@@ -83,13 +103,17 @@ export async function calculateWaste(
       (acc, code) => acc + countTokens(code, profile),
       0
     );
-    const turnTokens = userTokens + codeTokens;
+    const diffTokens = turn.assistantDiffs.reduce(
+      (acc, diff) => acc + countTokens([diff.targetFile || '', ...diff.searchLines, ...diff.addedLines].join('\n'), profile),
+      0
+    );
+    const turnTokens = userTokens + codeTokens + diffTokens;
     totalTokens += turnTokens;
 
     // Flag the turn as wasted if the AI generated code that didn't survive
     if (
-      turn.assistantCodeBlocks.length > 0 &&
-      !codeFoundInFinalTree(turn.assistantCodeBlocks, finalTreeContent)
+      (turn.assistantCodeBlocks.length > 0 || turn.assistantDiffs.length > 0) &&
+      !codeFoundInFinalTree(turn.assistantCodeBlocks, turn.assistantDiffs, finalTreeContent)
     ) {
       wastedTokens += turnTokens;
       wastedTurnsSet.add(i);
@@ -109,7 +133,11 @@ export async function calculateWaste(
       const prevTurn = turns[i - 1];
       const prevTokens =
         countTokens(prevTurn.user, profile) +
-        prevTurn.assistantCodeBlocks.reduce((acc, c) => acc + countTokens(c, profile), 0);
+        prevTurn.assistantCodeBlocks.reduce((acc, c) => acc + countTokens(c, profile), 0) +
+        prevTurn.assistantDiffs.reduce(
+          (acc, diff) => acc + countTokens([diff.targetFile || '', ...diff.searchLines, ...diff.addedLines].join('\n'), profile),
+          0
+        );
       wastedTokens += prevTokens;
     }
   }
