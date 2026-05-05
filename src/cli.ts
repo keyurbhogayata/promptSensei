@@ -7,6 +7,8 @@ import * as readline from 'readline';
 import { parseLog } from './parser';
 import { calculateWaste } from './calculator';
 import { readGitWorkingTree } from './git-reader';
+import { GraphClient } from './graphClient';
+import { OptimizerEngine } from './optimizer';
 
 const program = new Command();
 
@@ -103,6 +105,18 @@ program
         }
       }
     );
+  });
+
+program
+  .command('optimize')
+  .description('Optimize context for a given prompt')
+  .argument('<prompt>', 'The prompt to optimize for')
+  .action(async (prompt) => {
+    const client = new GraphClient(path.join(process.cwd(), 'graphify-out', 'graph.json'));
+    const engine = new OptimizerEngine(client);
+    const files = await engine.optimize(prompt);
+    console.log('### Optimized Context Files:\n');
+    files.forEach(f => console.log(`- ${f}`));
   });
 
 program.parse();
