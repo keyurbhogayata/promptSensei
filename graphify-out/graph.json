@@ -9,7 +9,7 @@
       "source_file": "deploy.ps1",
       "source_location": "L1",
       "id": "deploy_ps1",
-      "community": 1,
+      "community": 2,
       "norm_label": "deploy.ps1"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "deploy.ps1",
       "source_location": "L13",
       "id": "deploy_write_header",
-      "community": 1,
+      "community": 2,
       "norm_label": "write-header()"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "deploy.ps1",
       "source_location": "L19",
       "id": "deploy_write_step",
-      "community": 1,
+      "community": 2,
       "norm_label": "write-step()"
     },
     {
@@ -36,7 +36,7 @@
       "source_file": "deploy.ps1",
       "source_location": "L23",
       "id": "deploy_write_success",
-      "community": 1,
+      "community": 2,
       "norm_label": "write-success()"
     },
     {
@@ -45,7 +45,7 @@
       "source_file": "deploy.ps1",
       "source_location": "L27",
       "id": "deploy_write_fail",
-      "community": 1,
+      "community": 2,
       "norm_label": "write-fail()"
     },
     {
@@ -54,7 +54,7 @@
       "source_file": "deploy.ps1",
       "source_location": "L31",
       "id": "deploy_prompt_yesno",
-      "community": 1,
+      "community": 2,
       "norm_label": "prompt-yesno()"
     },
     {
@@ -63,7 +63,7 @@
       "source_file": "jest.config.js",
       "source_location": "L1",
       "id": "jest_config_js",
-      "community": 10,
+      "community": 12,
       "norm_label": "jest.config.js"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "src\\advisor.ts",
       "source_location": "L1",
       "id": "src_advisor_ts",
-      "community": 7,
+      "community": 8,
       "norm_label": "advisor.ts"
     },
     {
@@ -81,7 +81,7 @@
       "source_file": "src\\advisor.ts",
       "source_location": "L4",
       "id": "advisor_generatecoachingprompt",
-      "community": 7,
+      "community": 8,
       "norm_label": "generatecoachingprompt()"
     },
     {
@@ -90,7 +90,7 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\antiPatterns.ts",
       "source_location": "L1",
       "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_antipatterns_ts",
-      "community": 8,
+      "community": 9,
       "norm_label": "antipatterns.ts"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\antiPatterns.ts",
       "source_location": "L11",
       "id": "antipatterns_detectantipatterns",
-      "community": 8,
+      "community": 9,
       "norm_label": "detectantipatterns()"
     },
     {
@@ -108,7 +108,7 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
       "source_location": "L1",
       "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_calculator_ts",
-      "community": 5,
+      "community": 6,
       "norm_label": "calculator.ts"
     },
     {
@@ -117,7 +117,7 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
       "source_location": "L33",
       "id": "calculator_counttokens",
-      "community": 5,
+      "community": 6,
       "norm_label": "counttokens()"
     },
     {
@@ -126,7 +126,7 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
       "source_location": "L48",
       "id": "calculator_codefoundinfinaltree",
-      "community": 5,
+      "community": 6,
       "norm_label": "codefoundinfinaltree()"
     },
     {
@@ -135,16 +135,16 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
       "source_location": "L89",
       "id": "calculator_calculatewaste",
-      "community": 5,
+      "community": 6,
       "norm_label": "calculatewaste()"
     },
     {
       "label": "cli.ts",
       "file_type": "code",
-      "source_file": "src\\cli.ts",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\cli.ts",
       "source_location": "L1",
-      "id": "src_cli_ts",
-      "community": 11,
+      "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_cli_ts",
+      "community": 13,
       "norm_label": "cli.ts"
     },
     {
@@ -153,7 +153,7 @@
       "source_file": "src\\git-reader.ts",
       "source_location": "L1",
       "id": "src_git_reader_ts",
-      "community": 6,
+      "community": 7,
       "norm_label": "git-reader.ts"
     },
     {
@@ -162,7 +162,7 @@
       "source_file": "src\\git-reader.ts",
       "source_location": "L15",
       "id": "git_reader_isreadable",
-      "community": 6,
+      "community": 7,
       "norm_label": "isreadable()"
     },
     {
@@ -171,7 +171,7 @@
       "source_file": "src\\git-reader.ts",
       "source_location": "L23",
       "id": "git_reader_isgitrepo",
-      "community": 6,
+      "community": 7,
       "norm_label": "isgitrepo()"
     },
     {
@@ -180,8 +180,62 @@
       "source_file": "src\\git-reader.ts",
       "source_location": "L42",
       "id": "git_reader_readgitworkingtree",
-      "community": 6,
+      "community": 7,
       "norm_label": "readgitworkingtree()"
+    },
+    {
+      "label": "graphClient.ts",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\graphClient.ts",
+      "source_location": "L1",
+      "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_graphclient_ts",
+      "community": 0,
+      "norm_label": "graphclient.ts"
+    },
+    {
+      "label": "GraphClient",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\graphClient.ts",
+      "source_location": "L17",
+      "id": "graphclient_graphclient",
+      "community": 0,
+      "norm_label": "graphclient"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\graphClient.ts",
+      "source_location": "L22",
+      "id": "graphclient_graphclient_constructor",
+      "community": 0,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".load()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\graphClient.ts",
+      "source_location": "L24",
+      "id": "graphclient_graphclient_load",
+      "community": 0,
+      "norm_label": ".load()"
+    },
+    {
+      "label": ".findNodesByLabel()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\graphClient.ts",
+      "source_location": "L44",
+      "id": "graphclient_graphclient_findnodesbylabel",
+      "community": 0,
+      "norm_label": ".findnodesbylabel()"
+    },
+    {
+      "label": ".getNeighbors()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\graphClient.ts",
+      "source_location": "L50",
+      "id": "graphclient_graphclient_getneighbors",
+      "community": 0,
+      "norm_label": ".getneighbors()"
     },
     {
       "label": "index.ts",
@@ -189,26 +243,62 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\index.ts",
       "source_location": "L1",
       "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_index_ts",
-      "community": 12,
+      "community": 14,
       "norm_label": "index.ts"
     },
     {
       "label": "mcp-server.ts",
       "file_type": "code",
-      "source_file": "src\\mcp-server.ts",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\mcp-server.ts",
       "source_location": "L1",
-      "id": "src_mcp_server_ts",
-      "community": 9,
+      "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_mcp_server_ts",
+      "community": 10,
       "norm_label": "mcp-server.ts"
     },
     {
       "label": "startMcpServer()",
       "file_type": "code",
-      "source_file": "src\\mcp-server.ts",
-      "source_location": "L113",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\mcp-server.ts",
+      "source_location": "L149",
       "id": "mcp_server_startmcpserver",
-      "community": 9,
+      "community": 10,
       "norm_label": "startmcpserver()"
+    },
+    {
+      "label": "optimizer.ts",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\optimizer.ts",
+      "source_location": "L1",
+      "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_optimizer_ts",
+      "community": 0,
+      "norm_label": "optimizer.ts"
+    },
+    {
+      "label": "OptimizerEngine",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\optimizer.ts",
+      "source_location": "L4",
+      "id": "optimizer_optimizerengine",
+      "community": 0,
+      "norm_label": "optimizerengine"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\optimizer.ts",
+      "source_location": "L7",
+      "id": "optimizer_optimizerengine_constructor",
+      "community": 0,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".optimize()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\optimizer.ts",
+      "source_location": "L9",
+      "id": "optimizer_optimizerengine_optimize",
+      "community": 0,
+      "norm_label": ".optimize()"
     },
     {
       "label": "parser.ts",
@@ -216,7 +306,7 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
       "source_location": "L1",
       "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
-      "community": 2,
+      "community": 3,
       "norm_label": "parser.ts"
     },
     {
@@ -225,7 +315,7 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
       "source_location": "L14",
       "id": "parser_parselog",
-      "community": 2,
+      "community": 3,
       "norm_label": "parselog()"
     },
     {
@@ -234,7 +324,7 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
       "source_location": "L49",
       "id": "parser_createturn",
-      "community": 2,
+      "community": 3,
       "norm_label": "createturn()"
     },
     {
@@ -243,7 +333,7 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
       "source_location": "L88",
       "id": "parser_extractsearchreplace",
-      "community": 2,
+      "community": 3,
       "norm_label": "extractsearchreplace()"
     },
     {
@@ -252,7 +342,7 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
       "source_location": "L111",
       "id": "parser_extractunifieddiffs",
-      "community": 2,
+      "community": 3,
       "norm_label": "extractunifieddiffs()"
     },
     {
@@ -261,8 +351,26 @@
       "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
       "source_location": "L123",
       "id": "parser_parsediffcontent",
-      "community": 2,
+      "community": 3,
       "norm_label": "parsediffcontent()"
+    },
+    {
+      "label": "symbolExtractor.ts",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\utils\\symbolExtractor.ts",
+      "source_location": "L1",
+      "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_utils_symbolextractor_ts",
+      "community": 11,
+      "norm_label": "symbolextractor.ts"
+    },
+    {
+      "label": "extractSymbol()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\utils\\symbolExtractor.ts",
+      "source_location": "L3",
+      "id": "symbolextractor_extractsymbol",
+      "community": 11,
+      "norm_label": "extractsymbol()"
     },
     {
       "label": "extension.js",
@@ -270,7 +378,7 @@
       "source_file": "vscode-extension\\src\\extension.js",
       "source_location": "L1",
       "id": "vscode_extension_src_extension_js",
-      "community": 4,
+      "community": 5,
       "norm_label": "extension.js"
     },
     {
@@ -279,7 +387,7 @@
       "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L22",
       "id": "extension_activate",
-      "community": 4,
+      "community": 5,
       "norm_label": "activate()"
     },
     {
@@ -288,7 +396,7 @@
       "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L171",
       "id": "extension_deactivate",
-      "community": 4,
+      "community": 5,
       "norm_label": "deactivate()"
     },
     {
@@ -297,7 +405,7 @@
       "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L1",
       "id": "vscode_extension_src_extension_ts",
-      "community": 4,
+      "community": 5,
       "norm_label": "extension.ts"
     },
     {
@@ -306,118 +414,118 @@
       "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L96",
       "id": "extension_showreportwebview",
-      "community": 4,
+      "community": 5,
       "norm_label": "showreportwebview()"
     },
     {
       "label": "Future Ideas for PromptSensei",
       "file_type": "document",
-      "community": 3,
+      "community": 4,
       "norm_label": "future ideas for promptsensei",
       "id": "future_ideas"
     },
     {
       "label": "AI ROI Dashboard",
       "file_type": "document",
-      "community": 3,
+      "community": 4,
       "norm_label": "ai roi dashboard",
       "id": "ai_roi_dashboard"
     },
     {
       "label": "Anti-Pattern Detection Engine",
       "file_type": "document",
-      "community": 3,
+      "community": 4,
       "norm_label": "anti-pattern detection engine",
       "id": "anti_pattern_engine"
     },
     {
       "label": "Smart Search/Replace Diff Parser",
       "file_type": "document",
-      "community": 3,
+      "community": 4,
       "norm_label": "smart search/replace diff parser",
       "id": "diff_parser"
     },
     {
       "label": "CI/CD GitHub Action",
       "file_type": "document",
-      "community": 3,
+      "community": 4,
       "norm_label": "ci/cd github action",
       "id": "ci_cd_action"
     },
     {
       "label": "promptsensei optimize Command",
       "file_type": "document",
-      "community": 3,
+      "community": 4,
       "norm_label": "promptsensei optimize command",
       "id": "optimize_command"
     },
     {
       "label": "PromptSensei",
       "file_type": "document",
-      "community": 0,
+      "community": 1,
       "norm_label": "promptsensei",
       "id": "prompt_sensei"
     },
     {
       "label": "Features",
       "file_type": "document",
-      "community": 0,
+      "community": 1,
       "norm_label": "features",
       "id": "features"
     },
     {
       "label": "Getting Started",
       "file_type": "document",
-      "community": 0,
+      "community": 1,
       "norm_label": "getting started",
       "id": "getting_started"
     },
     {
       "label": "Standalone CLI Mode",
       "file_type": "document",
-      "community": 0,
+      "community": 1,
       "norm_label": "standalone cli mode",
       "id": "standalone_cli"
     },
     {
       "label": "MCP Server Mode",
       "file_type": "document",
-      "community": 0,
+      "community": 1,
       "norm_label": "mcp server mode",
       "id": "mcp_server"
     },
     {
       "label": "Docker MCP Toolkit",
       "file_type": "document",
-      "community": 0,
+      "community": 1,
       "norm_label": "docker mcp toolkit",
       "id": "docker_toolkit"
     },
     {
       "label": "Tech Stack",
       "file_type": "document",
-      "community": 0,
+      "community": 1,
       "norm_label": "tech stack",
       "id": "tech_stack"
     },
     {
       "label": "License",
       "file_type": "document",
-      "community": 0,
+      "community": 1,
       "norm_label": "license",
       "id": "license"
     },
     {
       "label": "VSCode Extension README",
       "file_type": "document",
-      "community": 0,
+      "community": 1,
       "norm_label": "vscode extension readme",
       "id": "vscode_readme"
     },
     {
       "label": "Icon",
       "file_type": "image",
-      "community": 0,
+      "community": 1,
       "norm_label": "icon",
       "id": "icon"
     }
@@ -630,13 +738,145 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\mcp-server.ts",
-      "source_location": "L113",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\graphClient.ts",
+      "source_location": "L17",
       "weight": 1.0,
-      "_src": "src_mcp_server_ts",
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_graphclient_ts",
+      "_tgt": "graphclient_graphclient",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_graphclient_ts",
+      "target": "graphclient_graphclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\graphClient.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_src": "graphclient_graphclient",
+      "_tgt": "graphclient_graphclient_constructor",
+      "source": "graphclient_graphclient",
+      "target": "graphclient_graphclient_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\graphClient.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "graphclient_graphclient",
+      "_tgt": "graphclient_graphclient_load",
+      "source": "graphclient_graphclient",
+      "target": "graphclient_graphclient_load",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\graphClient.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_src": "graphclient_graphclient",
+      "_tgt": "graphclient_graphclient_findnodesbylabel",
+      "source": "graphclient_graphclient",
+      "target": "graphclient_graphclient_findnodesbylabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\graphClient.ts",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_src": "graphclient_graphclient",
+      "_tgt": "graphclient_graphclient_getneighbors",
+      "source": "graphclient_graphclient",
+      "target": "graphclient_graphclient_getneighbors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\optimizer.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "graphclient_graphclient_load",
+      "_tgt": "optimizer_optimizerengine_optimize",
+      "source": "graphclient_graphclient_load",
+      "target": "optimizer_optimizerengine_optimize"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\optimizer.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_src": "graphclient_graphclient_findnodesbylabel",
+      "_tgt": "optimizer_optimizerengine_optimize",
+      "source": "graphclient_graphclient_findnodesbylabel",
+      "target": "optimizer_optimizerengine_optimize"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\optimizer.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "graphclient_graphclient_getneighbors",
+      "_tgt": "optimizer_optimizerengine_optimize",
+      "source": "graphclient_graphclient_getneighbors",
+      "target": "optimizer_optimizerengine_optimize"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\mcp-server.ts",
+      "source_location": "L149",
+      "weight": 1.0,
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_mcp_server_ts",
       "_tgt": "mcp_server_startmcpserver",
-      "source": "src_mcp_server_ts",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_mcp_server_ts",
       "target": "mcp_server_startmcpserver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\optimizer.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_optimizer_ts",
+      "_tgt": "optimizer_optimizerengine",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_optimizer_ts",
+      "target": "optimizer_optimizerengine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\optimizer.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_src": "optimizer_optimizerengine",
+      "_tgt": "optimizer_optimizerengine_constructor",
+      "source": "optimizer_optimizerengine",
+      "target": "optimizer_optimizerengine_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\optimizer.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "optimizer_optimizerengine",
+      "_tgt": "optimizer_optimizerengine_optimize",
+      "source": "optimizer_optimizerengine",
+      "target": "optimizer_optimizerengine_optimize",
       "confidence_score": 1.0
     },
     {
@@ -745,6 +985,18 @@
       "_tgt": "parser_parsediffcontent",
       "source": "parser_extractunifieddiffs",
       "target": "parser_parsediffcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\utils\\symbolExtractor.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_utils_symbolextractor_ts",
+      "_tgt": "symbolextractor_extractsymbol",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_utils_symbolextractor_ts",
+      "target": "symbolextractor_extractsymbol",
       "confidence_score": 1.0
     },
     {
