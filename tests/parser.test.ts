@@ -67,4 +67,13 @@ function updated() {
     expect(turns.length).toBe(1);
     expect(turns[0].assistantCodeBlocks).toContain('function updated() {\n  console.log("Improved");\n}');
   });
+
+  it('extracts parsed diffs correctly', () => {
+    const log = `## User\nUpdate it\n## Assistant\nHere is the diff:\n\`\`\`diff\n--- a/test.ts\n+++ b/test.ts\n@@ -1,1 +1,1 @@\n- var a = 1;\n+ var a = 2;\n\`\`\``;
+    const turns = parseLog(log);
+    expect(turns[0].assistantDiffs).toBeDefined();
+    expect(turns[0].assistantDiffs.length).toBe(1);
+    expect(turns[0].assistantDiffs[0].targetFile).toBe('test.ts');
+    expect(turns[0].assistantDiffs[0].addedLines.join('\\n')).toBe('var a = 2;');
+  });
 });

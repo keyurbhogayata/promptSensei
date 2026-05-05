@@ -1,7 +1,14 @@
 // src/parser.ts
+export interface ParsedDiff {
+  targetFile: string | null;
+  searchLines: string[];
+  addedLines: string[];
+}
+
 export interface Turn {
   user: string;
   assistantCodeBlocks: string[];
+  assistantDiffs: ParsedDiff[];
 }
 
 export function parseLog(content: string): Turn[] {
@@ -67,7 +74,7 @@ function createTurn(userText: string, assistantText: string): Turn {
     }
   });
 
-  return { user: userText.trim(), assistantCodeBlocks: codeBlocks };
+  return { user: userText.trim(), assistantCodeBlocks: codeBlocks, assistantDiffs: [] };
 }
 
 /**

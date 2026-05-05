@@ -4,10 +4,10 @@ import { Turn } from '../src/parser';
 describe('generateCoachingPrompt', () => {
   it('should generate a prompt containing only the wasted turns', () => {
     const turns: Turn[] = [
-      { user: 'Turn 0 good', assistantCodeBlocks: ['good code'] },
-      { user: 'Turn 1 bad', assistantCodeBlocks: ['bad code'] },
-      { user: 'Turn 2 okay', assistantCodeBlocks: ['okay code'] },
-      { user: 'Turn 3 bad again', assistantCodeBlocks: ['bad code 2'] },
+      { user: 'Turn 0 good', assistantDiffs: [], assistantCodeBlocks: ['good code'] },
+      { user: 'Turn 1 bad', assistantDiffs: [], assistantCodeBlocks: ['bad code'] },
+      { user: 'Turn 2 okay', assistantDiffs: [], assistantCodeBlocks: ['okay code'] },
+      { user: 'Turn 3 bad again', assistantDiffs: [], assistantCodeBlocks: ['bad code 2'] },
     ];
     const wastedIndices = [1, 3];
 
@@ -25,7 +25,7 @@ describe('generateCoachingPrompt', () => {
 
   it('should handle empty wasted indices gracefully', () => {
     const turns: Turn[] = [
-      { user: 'Turn 0 good', assistantCodeBlocks: ['good code'] }
+      { user: 'Turn 0 good', assistantDiffs: [], assistantCodeBlocks: ['good code'] }
     ];
     const prompt = generateCoachingPrompt(turns, []);
     expect(prompt).toBe('');
