@@ -6,3 +6,4 @@ export * from './calculator';
 export * from './advisor';
 export * from './git-reader';
 export * from './antiPatterns';
+export * from './optimizer';
