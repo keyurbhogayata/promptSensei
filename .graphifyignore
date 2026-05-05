@@ -6,7 +6,6 @@ dist/
 .github/
 .qodo/
 .vscode/
-.gitnexus/
 .graphifyignore
 .package-lock.json
 tests/
