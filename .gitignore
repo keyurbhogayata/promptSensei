@@ -29,3 +29,4 @@ npm-debug.log*
 .worktrees/
 worktrees/
 .gitnexus
+.worktrees
