@@ -1,11 +1,11 @@
-# Graph Report - C:\Users\KeyurBhogayata\.gemini\antigravity\scratch\promptSensei  (2026-05-04)
+# Graph Report - C:\Users\KeyurBhogayata\.gemini\antigravity\scratch\promptSensei  (2026-05-05)
 
 ## Corpus Check
-- 11 files · ~19,097 words
+- 12 files · ~19,632 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 46 nodes · 41 edges · 12 communities detected
+- 50 nodes · 46 edges · 13 communities detected
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -22,18 +22,19 @@
 - [[_COMMUNITY_Community 9|Community 9]]
 - [[_COMMUNITY_Community 10|Community 10]]
 - [[_COMMUNITY_Community 11|Community 11]]
+- [[_COMMUNITY_Community 12|Community 12]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `calculateWaste()` - 3 edges
-2. `readGitWorkingTree()` - 3 edges
-3. `createTurn()` - 3 edges
-4. `countTokens()` - 2 edges
-5. `codeFoundInFinalTree()` - 2 edges
-6. `isReadable()` - 2 edges
-7. `isGitRepo()` - 2 edges
-8. `parseLog()` - 2 edges
-9. `extractSearchReplace()` - 2 edges
-10. `activate()` - 2 edges
+1. `createTurn()` - 4 edges
+2. `calculateWaste()` - 3 edges
+3. `readGitWorkingTree()` - 3 edges
+4. `extractUnifiedDiffs()` - 3 edges
+5. `countTokens()` - 2 edges
+6. `codeFoundInFinalTree()` - 2 edges
+7. `isReadable()` - 2 edges
+8. `isGitRepo()` - 2 edges
+9. `parseLog()` - 2 edges
+10. `extractSearchReplace()` - 2 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -49,24 +50,24 @@ Cohesion: 0.33
 Nodes (0): 
 
 ### Community 2 - "Community 2"
+Cohesion: 0.6
+Nodes (5): createTurn(), extractSearchReplace(), extractUnifiedDiffs(), parseDiffContent(), parseLog()
+
+### Community 3 - "Community 3"
 Cohesion: 0.33
 Nodes (6): AI ROI Dashboard, Anti-Pattern Detection Engine, CI/CD GitHub Action, Smart Search/Replace Diff Parser, Future Ideas for PromptSensei, promptsensei optimize Command
 
-### Community 3 - "Community 3"
+### Community 4 - "Community 4"
 Cohesion: 0.5
 Nodes (2): activate(), deactivate()
 
-### Community 4 - "Community 4"
+### Community 5 - "Community 5"
 Cohesion: 0.83
 Nodes (3): calculateWaste(), codeFoundInFinalTree(), countTokens()
 
-### Community 5 - "Community 5"
-Cohesion: 0.83
-Nodes (3): isGitRepo(), isReadable(), readGitWorkingTree()
-
 ### Community 6 - "Community 6"
 Cohesion: 0.83
-Nodes (3): createTurn(), extractSearchReplace(), parseLog()
+Nodes (3): isGitRepo(), isReadable(), readGitWorkingTree()
 
 ### Community 7 - "Community 7"
 Cohesion: 1.0
@@ -88,16 +89,22 @@ Nodes (0):
 Cohesion: 1.0
 Nodes (0): 
 
+### Community 12 - "Community 12"
+Cohesion: 1.0
+Nodes (0): 
+
 ## Knowledge Gaps
 - **Thin community `Community 7`** (2 nodes): `generateCoachingPrompt()`, `advisor.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 8`** (2 nodes): `startMcpServer()`, `mcp-server.ts`
+- **Thin community `Community 8`** (2 nodes): `detectAntiPatterns()`, `antiPatterns.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 9`** (1 nodes): `jest.config.js`
+- **Thin community `Community 9`** (2 nodes): `startMcpServer()`, `mcp-server.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 10`** (1 nodes): `cli.ts`
+- **Thin community `Community 10`** (1 nodes): `jest.config.js`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 11`** (1 nodes): `index.ts`
+- **Thin community `Community 11`** (1 nodes): `cli.ts`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Community 12`** (1 nodes): `index.ts`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions

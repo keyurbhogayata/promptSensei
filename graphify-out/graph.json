@@ -63,7 +63,7 @@
       "source_file": "jest.config.js",
       "source_location": "L1",
       "id": "jest_config_js",
-      "community": 9,
+      "community": 10,
       "norm_label": "jest.config.js"
     },
     {
@@ -85,39 +85,57 @@
       "norm_label": "generatecoachingprompt()"
     },
     {
+      "label": "antiPatterns.ts",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\antiPatterns.ts",
+      "source_location": "L1",
+      "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_antipatterns_ts",
+      "community": 8,
+      "norm_label": "antipatterns.ts"
+    },
+    {
+      "label": "detectAntiPatterns()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\antiPatterns.ts",
+      "source_location": "L11",
+      "id": "antipatterns_detectantipatterns",
+      "community": 8,
+      "norm_label": "detectantipatterns()"
+    },
+    {
       "label": "calculator.ts",
       "file_type": "code",
-      "source_file": "src\\calculator.ts",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
       "source_location": "L1",
-      "id": "src_calculator_ts",
-      "community": 4,
+      "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_calculator_ts",
+      "community": 5,
       "norm_label": "calculator.ts"
     },
     {
       "label": "countTokens()",
       "file_type": "code",
-      "source_file": "src\\calculator.ts",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
       "source_location": "L33",
       "id": "calculator_counttokens",
-      "community": 4,
+      "community": 5,
       "norm_label": "counttokens()"
     },
     {
       "label": "codeFoundInFinalTree()",
       "file_type": "code",
-      "source_file": "src\\calculator.ts",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
       "source_location": "L48",
       "id": "calculator_codefoundinfinaltree",
-      "community": 4,
+      "community": 5,
       "norm_label": "codefoundinfinaltree()"
     },
     {
       "label": "calculateWaste()",
       "file_type": "code",
-      "source_file": "src\\calculator.ts",
-      "source_location": "L69",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
+      "source_location": "L89",
       "id": "calculator_calculatewaste",
-      "community": 4,
+      "community": 5,
       "norm_label": "calculatewaste()"
     },
     {
@@ -126,7 +144,7 @@
       "source_file": "src\\cli.ts",
       "source_location": "L1",
       "id": "src_cli_ts",
-      "community": 10,
+      "community": 11,
       "norm_label": "cli.ts"
     },
     {
@@ -135,7 +153,7 @@
       "source_file": "src\\git-reader.ts",
       "source_location": "L1",
       "id": "src_git_reader_ts",
-      "community": 5,
+      "community": 6,
       "norm_label": "git-reader.ts"
     },
     {
@@ -144,7 +162,7 @@
       "source_file": "src\\git-reader.ts",
       "source_location": "L15",
       "id": "git_reader_isreadable",
-      "community": 5,
+      "community": 6,
       "norm_label": "isreadable()"
     },
     {
@@ -153,7 +171,7 @@
       "source_file": "src\\git-reader.ts",
       "source_location": "L23",
       "id": "git_reader_isgitrepo",
-      "community": 5,
+      "community": 6,
       "norm_label": "isgitrepo()"
     },
     {
@@ -162,16 +180,16 @@
       "source_file": "src\\git-reader.ts",
       "source_location": "L42",
       "id": "git_reader_readgitworkingtree",
-      "community": 5,
+      "community": 6,
       "norm_label": "readgitworkingtree()"
     },
     {
       "label": "index.ts",
       "file_type": "code",
-      "source_file": "src\\index.ts",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\index.ts",
       "source_location": "L1",
-      "id": "src_index_ts",
-      "community": 11,
+      "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_index_ts",
+      "community": 12,
       "norm_label": "index.ts"
     },
     {
@@ -180,7 +198,7 @@
       "source_file": "src\\mcp-server.ts",
       "source_location": "L1",
       "id": "src_mcp_server_ts",
-      "community": 8,
+      "community": 9,
       "norm_label": "mcp-server.ts"
     },
     {
@@ -189,44 +207,62 @@
       "source_file": "src\\mcp-server.ts",
       "source_location": "L113",
       "id": "mcp_server_startmcpserver",
-      "community": 8,
+      "community": 9,
       "norm_label": "startmcpserver()"
     },
     {
       "label": "parser.ts",
       "file_type": "code",
-      "source_file": "src\\parser.ts",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
       "source_location": "L1",
-      "id": "src_parser_ts",
-      "community": 6,
+      "id": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
+      "community": 2,
       "norm_label": "parser.ts"
     },
     {
       "label": "parseLog()",
       "file_type": "code",
-      "source_file": "src\\parser.ts",
-      "source_location": "L7",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L14",
       "id": "parser_parselog",
-      "community": 6,
+      "community": 2,
       "norm_label": "parselog()"
     },
     {
       "label": "createTurn()",
       "file_type": "code",
-      "source_file": "src\\parser.ts",
-      "source_location": "L42",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L49",
       "id": "parser_createturn",
-      "community": 6,
+      "community": 2,
       "norm_label": "createturn()"
     },
     {
       "label": "extractSearchReplace()",
       "file_type": "code",
-      "source_file": "src\\parser.ts",
-      "source_location": "L76",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L88",
       "id": "parser_extractsearchreplace",
-      "community": 6,
+      "community": 2,
       "norm_label": "extractsearchreplace()"
+    },
+    {
+      "label": "extractUnifiedDiffs()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L111",
+      "id": "parser_extractunifieddiffs",
+      "community": 2,
+      "norm_label": "extractunifieddiffs()"
+    },
+    {
+      "label": "parseDiffContent()",
+      "file_type": "code",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L123",
+      "id": "parser_parsediffcontent",
+      "community": 2,
+      "norm_label": "parsediffcontent()"
     },
     {
       "label": "extension.js",
@@ -234,7 +270,7 @@
       "source_file": "vscode-extension\\src\\extension.js",
       "source_location": "L1",
       "id": "vscode_extension_src_extension_js",
-      "community": 3,
+      "community": 4,
       "norm_label": "extension.js"
     },
     {
@@ -243,7 +279,7 @@
       "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L22",
       "id": "extension_activate",
-      "community": 3,
+      "community": 4,
       "norm_label": "activate()"
     },
     {
@@ -252,7 +288,7 @@
       "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L171",
       "id": "extension_deactivate",
-      "community": 3,
+      "community": 4,
       "norm_label": "deactivate()"
     },
     {
@@ -261,7 +297,7 @@
       "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L1",
       "id": "vscode_extension_src_extension_ts",
-      "community": 3,
+      "community": 4,
       "norm_label": "extension.ts"
     },
     {
@@ -270,48 +306,48 @@
       "source_file": "vscode-extension\\src\\extension.ts",
       "source_location": "L96",
       "id": "extension_showreportwebview",
-      "community": 3,
+      "community": 4,
       "norm_label": "showreportwebview()"
     },
     {
       "label": "Future Ideas for PromptSensei",
       "file_type": "document",
-      "community": 2,
+      "community": 3,
       "norm_label": "future ideas for promptsensei",
       "id": "future_ideas"
     },
     {
       "label": "AI ROI Dashboard",
       "file_type": "document",
-      "community": 2,
+      "community": 3,
       "norm_label": "ai roi dashboard",
       "id": "ai_roi_dashboard"
     },
     {
       "label": "Anti-Pattern Detection Engine",
       "file_type": "document",
-      "community": 2,
+      "community": 3,
       "norm_label": "anti-pattern detection engine",
       "id": "anti_pattern_engine"
     },
     {
       "label": "Smart Search/Replace Diff Parser",
       "file_type": "document",
-      "community": 2,
+      "community": 3,
       "norm_label": "smart search/replace diff parser",
       "id": "diff_parser"
     },
     {
       "label": "CI/CD GitHub Action",
       "file_type": "document",
-      "community": 2,
+      "community": 3,
       "norm_label": "ci/cd github action",
       "id": "ci_cd_action"
     },
     {
       "label": "promptsensei optimize Command",
       "file_type": "document",
-      "community": 2,
+      "community": 3,
       "norm_label": "promptsensei optimize command",
       "id": "optimize_command"
     },
@@ -462,44 +498,56 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\calculator.ts",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\antiPatterns.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_antipatterns_ts",
+      "_tgt": "antipatterns_detectantipatterns",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_antipatterns_ts",
+      "target": "antipatterns_detectantipatterns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
       "source_location": "L33",
       "weight": 1.0,
-      "_src": "src_calculator_ts",
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_calculator_ts",
       "_tgt": "calculator_counttokens",
-      "source": "src_calculator_ts",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_calculator_ts",
       "target": "calculator_counttokens",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\calculator.ts",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
       "source_location": "L48",
       "weight": 1.0,
-      "_src": "src_calculator_ts",
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_calculator_ts",
       "_tgt": "calculator_codefoundinfinaltree",
-      "source": "src_calculator_ts",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_calculator_ts",
       "target": "calculator_codefoundinfinaltree",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\calculator.ts",
-      "source_location": "L69",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
+      "source_location": "L89",
       "weight": 1.0,
-      "_src": "src_calculator_ts",
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_calculator_ts",
       "_tgt": "calculator_calculatewaste",
-      "source": "src_calculator_ts",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_calculator_ts",
       "target": "calculator_calculatewaste",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "src\\calculator.ts",
-      "source_location": "L81",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
+      "source_location": "L101",
       "weight": 1.0,
       "_src": "calculator_calculatewaste",
       "_tgt": "calculator_counttokens",
@@ -510,8 +558,8 @@
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "src\\calculator.ts",
-      "source_location": "L92",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\calculator.ts",
+      "source_location": "L116",
       "weight": 1.0,
       "_src": "calculator_calculatewaste",
       "_tgt": "calculator_codefoundinfinaltree",
@@ -594,44 +642,68 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\parser.ts",
-      "source_location": "L7",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L14",
       "weight": 1.0,
-      "_src": "src_parser_ts",
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
       "_tgt": "parser_parselog",
-      "source": "src_parser_ts",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
       "target": "parser_parselog",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\parser.ts",
-      "source_location": "L42",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L49",
       "weight": 1.0,
-      "_src": "src_parser_ts",
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
       "_tgt": "parser_createturn",
-      "source": "src_parser_ts",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
       "target": "parser_createturn",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src\\parser.ts",
-      "source_location": "L76",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L88",
       "weight": 1.0,
-      "_src": "src_parser_ts",
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
       "_tgt": "parser_extractsearchreplace",
-      "source": "src_parser_ts",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
       "target": "parser_extractsearchreplace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
+      "_tgt": "parser_extractunifieddiffs",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
+      "target": "parser_extractunifieddiffs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_src": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
+      "_tgt": "parser_parsediffcontent",
+      "source": "c_users_keyurbhogayata_gemini_antigravity_scratch_promptsensei_src_parser_ts",
+      "target": "parser_parsediffcontent",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "src\\parser.ts",
-      "source_location": "L25",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L32",
       "weight": 1.0,
       "_src": "parser_parselog",
       "_tgt": "parser_createturn",
@@ -642,13 +714,37 @@
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
-      "source_file": "src\\parser.ts",
-      "source_location": "L52",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L63",
       "weight": 1.0,
       "_src": "parser_createturn",
       "_tgt": "parser_extractsearchreplace",
       "source": "parser_createturn",
       "target": "parser_extractsearchreplace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_src": "parser_createturn",
+      "_tgt": "parser_extractunifieddiffs",
+      "source": "parser_createturn",
+      "target": "parser_extractunifieddiffs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "C:\\Users\\KeyurBhogayata\\.gemini\\antigravity\\scratch\\promptSensei\\src\\parser.ts",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_src": "parser_extractunifieddiffs",
+      "_tgt": "parser_parsediffcontent",
+      "source": "parser_extractunifieddiffs",
+      "target": "parser_parsediffcontent",
       "confidence_score": 1.0
     },
     {
