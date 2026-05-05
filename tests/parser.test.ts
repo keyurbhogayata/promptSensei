@@ -65,7 +65,8 @@ function updated() {
 `;
     const turns = parseLog(logContent);
     expect(turns.length).toBe(1);
-    expect(turns[0].assistantCodeBlocks).toContain('function updated() {\n  console.log("Improved");\n}');
+    expect(turns[0].assistantDiffs.length).toBe(1);
+    expect(turns[0].assistantDiffs[0].addedLines.join('\n')).toBe('function updated() {\n  console.log("Improved");\n}');
   });
 
   it('extracts parsed diffs correctly', () => {

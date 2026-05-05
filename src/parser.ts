@@ -48,52 +48,58 @@ export function parseLog(content: string): Turn[] {
 
 function createTurn(userText: string, assistantText: string): Turn {
   const codeBlocks: string[] = [];
+  const diffs: ParsedDiff[] = [];
   
   // 1. Standard Markdown Code Blocks
-  const codeRegex = /```[\w]*\n([\s\S]*?)```/g;
+  const codeRegex = /```([\w]*)\n([\s\S]*?)```/g;
   let match;
   while ((match = codeRegex.exec(assistantText)) !== null) {
-    const blockContent = match[1].trim();
+    const lang = match[1].trim().toLowerCase();
+    const blockContent = match[2].trim();
     if (blockContent) {
-      // Check if this block contains SEARCH/REPLACE blocks
-      const srBlocks = extractSearchReplace(blockContent);
-      if (srBlocks.length > 0) {
-        codeBlocks.push(...srBlocks);
+      if (lang === 'diff' || lang === 'patch') {
+        // Handled below by extractUnifiedDiffs
       } else {
-        codeBlocks.push(blockContent);
+        const srDiffs = extractSearchReplace(blockContent);
+        if (srDiffs.length > 0) {
+          diffs.push(...srDiffs);
+        } else {
+          codeBlocks.push(blockContent);
+        }
       }
     }
   }
 
   // 2. Loose SEARCH/REPLACE blocks (not wrapped in code blocks)
-  const looseSR = extractSearchReplace(assistantText);
-  // Avoid duplicates if they were already found inside code blocks
-  looseSR.forEach(block => {
-    if (!codeBlocks.includes(block)) {
-      codeBlocks.push(block);
-    }
-  });
+  const textWithoutCodeBlocks = assistantText.replace(codeRegex, '');
+  const looseSR = extractSearchReplace(textWithoutCodeBlocks);
+  diffs.push(...looseSR);
 
   // 3. Unified Diffs
   const unifiedDiffs = extractUnifiedDiffs(assistantText);
+  diffs.push(...unifiedDiffs);
 
-  return { user: userText.trim(), assistantCodeBlocks: codeBlocks, assistantDiffs: unifiedDiffs };
+  return { user: userText.trim(), assistantCodeBlocks: codeBlocks, assistantDiffs: diffs };
 }
 
 /**
- * Extracts the 'REPLACE' part of SEARCH/REPLACE blocks.
+ * Extracts SEARCH/REPLACE blocks as ParsedDiff objects.
  */
-function extractSearchReplace(text: string): string[] {
-  const results: string[] = [];
-  const srRegex = /<<<<<<< SEARCH[\s\S]*?=======([\s\S]*?)>>>>>>>/g;
-  const srRegexAlternative = /<<<< SEARCH[\s\S]*?====([\s\S]*?)>>>>/g;
+function extractSearchReplace(text: string): ParsedDiff[] {
+  const results: ParsedDiff[] = [];
+  const srRegex = /<<<<(?:<<<)? SEARCH\s*([\s\S]*?)====(?:===)?\s*([\s\S]*?)>>>>(?:>>>)?/g;
   
   let match;
   while ((match = srRegex.exec(text)) !== null) {
-    if (match[1].trim()) results.push(match[1].trim());
-  }
-  while ((match = srRegexAlternative.exec(text)) !== null) {
-    if (match[1].trim()) results.push(match[1].trim());
+    const searchContent = match[1].trim();
+    const replaceContent = match[2].trim();
+    if (replaceContent || searchContent) {
+      results.push({
+        targetFile: null,
+        searchLines: searchContent ? searchContent.split('\n') : [],
+        addedLines: replaceContent ? replaceContent.split('\n') : []
+      });
+    }
   }
   
   return results;
