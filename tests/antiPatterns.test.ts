@@ -24,4 +24,17 @@ describe('Anti-Pattern Detection', () => {
     expect(result[0].turnIndex).toBe(0);
     expect(result[0].antiPatterns).toContain('Vague Debugging');
   });
+
+  it('should detect Context Dumping', () => {
+    // Generate a long string to simulate context dumping
+    const longInput = 'Here is my code. ' + 'a'.repeat(2000);
+    const turns: Turn[] = [{
+      user: longInput,
+      assistantCodeBlocks: [],
+      assistantDiffs: []
+    }];
+    const result = detectAntiPatterns(turns);
+    expect(result.length).toBe(1);
+    expect(result[0].antiPatterns).toContain('Context Dumping');
+  });
 });

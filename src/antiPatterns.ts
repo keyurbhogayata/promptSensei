@@ -21,6 +21,11 @@ export function detectAntiPatterns(turns: Turn[]): AntiPatternReport[] {
       patterns.push('Vague Debugging');
     }
 
+    // Context Dumping: Input length exceeds 1500 characters
+    if (userInput.length > 1500) {
+      patterns.push('Context Dumping');
+    }
+
     if (patterns.length > 0) {
       reports.push({
         turnIndex: index,
