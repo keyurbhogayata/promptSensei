@@ -12,4 +12,16 @@ describe('Anti-Pattern Detection', () => {
     const result = detectAntiPatterns(turns);
     expect(result).toEqual([]);
   });
+
+  it('should detect Vague Debugging', () => {
+    const turns: Turn[] = [{
+      user: 'it is broken fix the error',
+      assistantCodeBlocks: [],
+      assistantDiffs: []
+    }];
+    const result = detectAntiPatterns(turns);
+    expect(result.length).toBe(1);
+    expect(result[0].turnIndex).toBe(0);
+    expect(result[0].antiPatterns).toContain('Vague Debugging');
+  });
 });

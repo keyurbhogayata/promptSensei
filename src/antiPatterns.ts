@@ -9,5 +9,25 @@ export interface AntiPatternReport {
 }
 
 export function detectAntiPatterns(turns: Turn[]): AntiPatternReport[] {
-  return [];
+  const reports: AntiPatternReport[] = [];
+
+  turns.forEach((turn, index) => {
+    const patterns: AntiPatternType[] = [];
+    const userInput = turn.user.trim().toLowerCase();
+
+    // Vague Debugging: Less than 50 characters and contains complaint keywords
+    const complaintWords = ['broken', 'error', 'not working', 'fix', 'failed', 'bug'];
+    if (userInput.length < 50 && complaintWords.some(word => userInput.includes(word))) {
+      patterns.push('Vague Debugging');
+    }
+
+    if (patterns.length > 0) {
+      reports.push({
+        turnIndex: index,
+        antiPatterns: patterns
+      });
+    }
+  });
+
+  return reports;
 }
