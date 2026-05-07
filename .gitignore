@@ -29,3 +29,6 @@ npm-debug.log*
 .worktrees/
 worktrees/
 .worktrees
+
+# Tool-specific caches
+.repowise/wiki.db

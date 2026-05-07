@@ -1,0 +1,13 @@
+# Codebase Structure
+- `src/`: Source code
+    - `parser.ts`: Parses chat logs into structured conversation turns.
+    - `calculator.ts`: Calculates token usage and identifies "wasted" turns.
+    - `advisor.ts`: Generates coaching prompts.
+    - `antiPatterns.ts`: Heuristics for prompting mistakes.
+    - `optimizer.ts`: Prunes context using a knowledge graph.
+    - `cli.ts`: CLI entry point.
+    - `mcp-server.ts`: MCP server entry point.
+- `tests/`: Test files, mirroring `src/`.
+- `vscode-extension/`: Source for the VS Code extension.
+- `docs/`: Documentation and plans.
+- `graphify-out/`: Knowledge graph outputs.
